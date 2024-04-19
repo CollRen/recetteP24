@@ -73,6 +73,16 @@ Route::get('/', function () {
     return view('welcome');
 })->name("welcome");
 
+Route::get('forfait', function () {
+    return view('forfait');
+    // return view('index');
+})->name("forfait");
+
+Route::get('contact', function () {
+    return view('contact');
+    // return view('index');
+})->name("contact");
+
 
 
 Route::get('/{slug}-{id}', function (string $slug, string $id, Request $request) {
