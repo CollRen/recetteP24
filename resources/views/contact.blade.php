@@ -1,6 +1,6 @@
 @extends('partials.base')
 
-@section('titre', 'contact')
+@section('titre', trans('Contact'))
 
 @section('content')
 

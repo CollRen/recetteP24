@@ -25,8 +25,8 @@
               class="text-sm font-semibold leading-6  hover:text-red-900 {{ request()->is('forfait') ? 'text-red-900' : 'text-gray-900' }}">@lang('Pricing')</a>
           <a href="/contact"
               class="text-sm font-semibold leading-6  hover:text-red-900 {{ request()->is('contact') ? 'text-red-900' : 'text-gray-900' }}">Contact</a>
-          <a href="#"
-              class="text-sm font-semibold leading-6  hover:text-red-900 {{ request()->is('apropos') ? 'text-red-900' : 'text-gray-900' }}">@lang('About')</a>
+          <a href="/about"
+              class="text-sm font-semibold leading-6  hover:text-red-900 {{ request()->is('about') ? 'text-red-900' : 'text-gray-900' }}">@lang('About')</a>
           <a href="#"
               class="text-sm font-semibold leading-6  hover:text-red-900 {{ request()->is('histoire') ? 'text-red-900' : 'text-gray-900' }}">@lang('Our Story')</a>
           <ul class="dropdown-menu">

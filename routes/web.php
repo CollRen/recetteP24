@@ -83,6 +83,11 @@ Route::get('contact', function () {
     // return view('index');
 })->name("contact");
 
+Route::get('about', function () {
+    return view('about');
+    // return view('index');
+})->name("about");
+
 
 
 Route::get('/{slug}-{id}', function (string $slug, string $id, Request $request) {
