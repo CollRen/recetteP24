@@ -33,10 +33,12 @@
               <li><a class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('voir') ? 'text-red-900 underline' : 'text-gray-900' }}" href="{{ route('user.create') }}">@lang('New User')</a></li>
               <li><a class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('voir') ? 'text-red-900 underline' : 'text-gray-900' }}" href="{{ route('user.index') }}">@lang('Users')</a></li>
           </ul>
-          <ul class="dropdown-menu">
-              <li><a class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('voir') ? 'text-red-900 underline' : 'text-gray-900' }}" href="{{ route('lang', 'en') }}">@lang('English')</a></li>
-              <li><a class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('voir') ? 'text-red-900 underline' : 'text-gray-900' }}" href="{{ route('lang', 'fr') }}">@lang('French')</a></li>
-          </ul>
+
+          @if($locale =='en')
+              <a class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('voir') ? 'text-red-900 underline' : 'text-gray-900' }}" href="{{ route('lang', 'en') }}">@lang('English')</a>
+            @else
+              <a class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('voir') ? 'text-red-900 underline' : 'text-gray-900' }}" href="{{ route('lang', 'fr') }}">@lang('French')</a>
+          @endif
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#"

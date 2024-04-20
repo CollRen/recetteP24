@@ -3,6 +3,7 @@
 
 <body>
     @include('partials.header')
+    @include('partials.back')
 
     @yield('content')
 
@@ -10,3 +11,5 @@
 </body>
 
 </html>
+
+

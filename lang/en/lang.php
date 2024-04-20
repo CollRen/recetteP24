@@ -1,7 +1,7 @@
 <?php
 return [
     "text_welcome" => "Welcome",
-    "text_welcome_title" => "Welcome to your Receipee Web App",
+    "text_welcome_title" => "Welcome to your Recipe Web App",
     "text_welcome_paragraph" => "<p class='lead'>This is a simple recipes list application built with Laravel and Tailwind.</p>
     <p>Get started by creating your first rececipe!</p>",
     'text_welcome_btn' => "Go to Recipipe List",

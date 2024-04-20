@@ -9,7 +9,7 @@ $annee = date('Y');
                 <div class="w-full lg:w-6/12 px-4">
                     <h4 class="text-3xl fonat-semibold text-clr-pri1">Des commentaires&nbsp;?</h4>
                     <h5 class="text-lg mt-0 mb-2 text-clr-pri1">
-                        Rejoingez-nous sur nos plateformes sociales.
+                        Rejoignez-nous sur nos plateformes sociales.
                     </h5>
                     <div class="mt-6 lg:mb-0 mb-6">
                         <button

@@ -23,7 +23,7 @@ Vite est plus simple, Babel est compliqué
 
 Préfixer Css pour les vieux navigateur
 Js: S'assurer que tous les composants sont correctes
-Surveille au fur et à mesure de la production pour améliorer, meilleurs pratiques, erreurs etc.
+Surveille au fur et à mesure de la production pour améliorer, meilleures pratiques, erreurs etc.
 
 Plus besoin du serveur de développement, le fichier est compilé automatiquement.
 
