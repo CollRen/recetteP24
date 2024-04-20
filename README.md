@@ -4,6 +4,17 @@ Partir le serveur et Vite, dans un deuxième temps
 > php artisan serve
 > npm run dev
 
+## Variable
+
+1. Couleurs
+2. typo
+
+
+## Routes
+
+1. Groupe
+
+
 ## Créer une page edit à partir de create
 
 1. copier create.blade.php & ajuster le contenu (@method('PUT'))

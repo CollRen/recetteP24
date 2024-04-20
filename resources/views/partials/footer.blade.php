@@ -36,15 +36,15 @@ $annee = date('Y');
                             <ul class="list-unstyled">
                                 <li>
                                     <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                        href="https://www.creative-tim.com/presentation?ref=njs-profile">À propos</a>
+                                        href="/about">@lang('About')</a>
                                 </li>
                                 <li>
                                     <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                        href="https://blog.creative-tim.com?ref=njs-profile">Blogue</a>
+                                        href="/forfait">@lang('Pricing')</a>
                                 </li>
                                 <li>
                                     <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                        href="https://www.github.com/creativetimofficial?ref=njs-profile">Github</a>
+                                        href="/">@lang('Home')</a>
                                 </li>
 
                             </ul>
@@ -62,7 +62,7 @@ $annee = date('Y');
                                 </li>
                                 <li>
                                     <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                        href="https://creative-tim.com/contact-us?ref=njs-profile">Contact</a>
+                                        href="/contact">Contact</a>
                                 </li>
                             </ul>
                         </div>
