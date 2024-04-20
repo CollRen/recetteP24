@@ -47,17 +47,18 @@ Route::get('/login', [AuthController::class, 'create'])->name('login');
 Route::post('/login', [AuthController::class, 'store'])->name('login.store');
 Route::get('/logout', [AuthController::class, 'destroy'])->name('logout');
 
-
-
-Route::get('/create/category', [CategoryController::class, 'create'])->name('category.create');
-Route::post('/create/category', [CategoryController::class, 'store'])->name('category.store');
-Route::get('/categories', [CategoryController::class, 'index'])->name('category.index');
-Route::get('/category/{category}', [CategoryController::class, 'show'])->name('category.show');
-Route::get('/edit/category/{category}', [CategoryController::class, 'edit'])->name('category.edit');
-Route::put('/edit/category/{category}', [CategoryController::class, 'update'])->name('category.update');
-Route::delete('/category/{category}', [CategoryController::class, 'destroy'])->name('category.delete');
-
-
+/**
+ * Ces routes peuvent sevir de template
+ */
+Route::prefix('/category')->name('category.')->group(function () {
+Route::get('/create', [CategoryController::class, 'create'])->name('create');
+Route::post('/create', [CategoryController::class, 'store'])->name('store');
+Route::get('/category', [CategoryController::class, 'index'])->name('index');
+Route::get('/{category}', [CategoryController::class, 'show'])->name('show');
+Route::get('/edit/{category}', [CategoryController::class, 'edit'])->name('edit');
+Route::put('/edit/{category}', [CategoryController::class, 'update'])->name('update');
+Route::delete('/{category}', [CategoryController::class, 'destroy'])->name('delete');
+});
 
 
 Route::get('/password/forgot', [UserController::class, 'forgot'])->name('user.forgot');
@@ -73,10 +74,12 @@ Route::get('/', function () {
     return view('welcome');
 })->name("welcome");
 
+
 Route::get('forfait', function () {
     return view('forfait');
     // return view('index');
 })->name("forfait");
+
 
 Route::get('contact', function () {
     return view('contact');
