@@ -3,27 +3,27 @@
 $annee = date('Y');
 @endphp 
 <footer>
-    <footer class="relative bg-gray-300 pt-8 pb-6">
+    <footer class="relative bg-clr-pale1 pt-8 pb-6">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap text-left lg:text-left">
                 <div class="w-full lg:w-6/12 px-4">
-                    <h4 class="text-3xl fonat-semibold text-blueGray-700">Des commentaires&nbsp;?</h4>
-                    <h5 class="text-lg mt-0 mb-2 text-blueGray-600">
+                    <h4 class="text-3xl fonat-semibold text-clr-pri1">Des commentaires&nbsp;?</h4>
+                    <h5 class="text-lg mt-0 mb-2 text-clr-pri1">
                         Rejoingez-nous sur nos plateformes sociales.
                     </h5>
                     <div class="mt-6 lg:mb-0 mb-6">
                         <button
-                            class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                            class="bg-white text-clr-pri1 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                             type="button">
                             <i class="fab fa-twitter"></i></button>
                             <button
-                            class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                            class="bg-white text-clr-pri1 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                             type="button">
                             <i class="fab fa-facebook-square"></i></button><button
-                            class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                            class="bg-white text-clr-pri1 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                             type="button">
                             <i class="fab fa-dribbble"></i></button><button
-                            class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                            class="bg-white text-clr-pri1 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                             type="button">
                             <i class="fab fa-github"></i>
                         </button>
@@ -32,36 +32,36 @@ $annee = date('Y');
                 <div class="w-full lg:w-6/12 px-4">
                     <div class="flex flex-wrap items-top mb-6">
                         <div class="w-full lg:w-4/12 px-4 ml-auto">
-                            <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Liens utililes</span>
+                            <span class="block uppercase text-clr-pri2 text-sm font-semibold mb-2">Liens utililes</span>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                    <a class="text-clr-pri1 hover:text-clr-pri1 font-semibold block pb-2 text-sm"
                                         href="/about">@lang('About')</a>
                                 </li>
                                 <li>
-                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                    <a class="text-clr-pri1 hover:text-clr-pri1 font-semibold block pb-2 text-sm"
                                         href="/forfait">@lang('Pricing')</a>
                                 </li>
                                 <li>
-                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                    <a class="text-clr-pri1 hover:text-clr-pri1 font-semibold block pb-2 text-sm"
                                         href="/">@lang('Home')</a>
                                 </li>
 
                             </ul>
                         </div>
                         <div class="w-full lg:w-4/12 px-4">
-                            <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Autres ressources</span>
+                            <span class="block uppercase text-clr-pri2 text-sm font-semibold mb-2">Autres ressources</span>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                    <a class="text-clr-pri1 hover:text-clr-pri1 font-semibold block pb-2 text-sm"
                                         href="https://creative-tim.com/terms?ref=njs-profile">Termes &amp; Conditions</a>
                                 </li>
                                 <li>
-                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                    <a class="text-clr-pri1 hover:text-clr-pri1 font-semibold block pb-2 text-sm"
                                         href="https://creative-tim.com/privacy?ref=njs-profile">Vie privée</a>
                                 </li>
                                 <li>
-                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                    <a class="text-clr-pri1 hover:text-clr-pri1 font-semibold block pb-2 text-sm"
                                         href="/contact">Contact</a>
                                 </li>
                             </ul>
@@ -69,17 +69,17 @@ $annee = date('Y');
                     </div>
                 </div>
             </div>
-            <hr class="my-6 border-blueGray-300">
+            <hr class="my-6 border-blueclr-pale1">
             <div class="flex flex-wrap items-center md:justify-between justify-center">
                 <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-                    <div class="text-sm text-blueGray-500 font-semibold py-1">
+                    <div class="text-sm text-clr-pri2 font-semibold py-1">
                         Copyright © <span id="get-current-year">@php
                             echo $annee;
                         @endphp</span><a
                             href="https://www.creative-tim.com/product/notus-js"
-                            class="text-blueGray-500 hover:text-gray-800" target="_blank"> Créé par
+                            class="text-clr-pri2 hover:text-gray-800" target="_blank"> Créé par
                             <a href="https://www.creative-tim.com?ref=njs-profile"
-                                class="text-blueGray-500 hover:text-blueGray-800">RDM WEB</a>.
+                                class="text-clr-pri2 hover:text-clr-pri1">RDM WEB</a>.
                     </div>
                 </div>
             </div>

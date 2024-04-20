@@ -19,13 +19,13 @@
                     class="font-heading mb-4 font-bold tracking-tight text-gray-900 text-3xl sm:text-5xl">
                     @lang('Stay connected')
                 </h2>
-                <p class="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400">Dans les cas où l'informations n'est pas disponible en virtuel
+                <p class="mx-auto mt-4 max-w-3xl text-xl text-clr-pri1 dark:text-slate-400">Dans les cas où l'informations n'est pas disponible en virtuel
             </div>
         </div>
         <div class="flex items-stretch justify-center">
             <div class="grid md:grid-cols-2">
                 <div class="h-full pr-6">
-                    <p class="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">
+                    <p class="mt-3 mb-12 text-lg text-clr-pri1 dark:text-slate-400">
                         Là où vous nous attendez le moins, nous ne nous immerons pas... c'est la moindre des choses&nbsp;!
                     </p>
                     <ul class="mb-6 md:mb-0">
@@ -43,8 +43,8 @@
                             <div class="ml-4 mb-4">
                                 <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Notre adresse
                                 </h3>
-                                <p class="text-gray-600 dark:text-slate-400">1230 Rue du Siècle</p>
-                                <p class="text-gray-600 dark:text-slate-400">Montréal, QC</p>
+                                <p class="text-clr-pri1 dark:text-slate-400">1230 Rue du Siècle</p>
+                                <p class="text-clr-pri1 dark:text-slate-400">Montréal, QC</p>
                             </div>
                         </li>
                         <li class="flex">
@@ -62,8 +62,8 @@
                             <div class="ml-4 mb-4">
                                 <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Contact
                                 </h3>
-                                <p class="text-gray-600 dark:text-slate-400">Mobile: +1 (514) 456-7890</p>
-                                <p class="text-gray-600 dark:text-slate-400">Mail: ttrraiv@gmail.com</p>
+                                <p class="text-clr-pri1 dark:text-slate-400">Mobile: +1 (514) 456-7890</p>
+                                <p class="text-clr-pri1 dark:text-slate-400">Mail: ttrraiv@gmail.com</p>
                             </div>
                         </li>
                         <li class="flex">
@@ -78,8 +78,8 @@
                             <div class="ml-4 mb-4">
                                 <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Heures d'ouverture
                                     hours</h3>
-                                <p class="text-gray-600 dark:text-slate-400">Lundi - Vendredi: 08:00 - 17:00</p>
-                                <p class="text-gray-600 dark:text-slate-400">Samedi &amp; Dimanche: 08:00 - 12:00</p>
+                                <p class="text-clr-pri1 dark:text-slate-400">Lundi - Vendredi: 08:00 - 17:00</p>
+                                <p class="text-clr-pri1 dark:text-slate-400">Samedi &amp; Dimanche: 08:00 - 12:00</p>
                             </div>
                         </li>
                     </ul>
@@ -90,14 +90,14 @@
                         <div class="mb-6">
                             <div class="mx-0 mb-1 sm:mb-4">
                                 <div class="mx-0 mb-1 sm:mb-4">
-                                    <label for="name" class="pb-1 text-xs uppercase tracking-wider"></label><input type="text" id="name" autocomplete="given-name" placeholder="Nom complet" class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0" name="name">
+                                    <label for="name" class="pb-1 text-xs uppercase tracking-wider"></label><input type="text" id="name" autocomplete="given-name" placeholder="Nom complet" class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-clr-pale1 sm:mb-0" name="name">
                                 </div>
                                 <div class="mx-0 mb-1 sm:mb-4">
-                                    <label for="email" class="pb-1 text-xs uppercase tracking-wider"></label><input type="email" id="email" autocomplete="email" placeholder="Adresse courriel" class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0" name="email">
+                                    <label for="email" class="pb-1 text-xs uppercase tracking-wider"></label><input type="email" id="email" autocomplete="email" placeholder="Adresse courriel" class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-clr-pale1 sm:mb-0" name="email">
                                 </div>
                             </div>
                             <div class="mx-0 mb-1 sm:mb-4">
-                                <label for="textarea" class="pb-1 text-xs uppercase tracking-wider"></label><textarea id="textarea" name="textarea" cols="30" rows="5" placeholder="Taper votre message..." class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"></textarea>
+                                <label for="textarea" class="pb-1 text-xs uppercase tracking-wider"></label><textarea id="textarea" name="textarea" cols="30" rows="5" placeholder="Taper votre message..." class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-clr-pale1 sm:mb-0"></textarea>
                             </div>
                         </div>
                         <div class="text-center">

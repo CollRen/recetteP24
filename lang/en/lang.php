@@ -9,6 +9,7 @@ return [
     'text_copryright' => "All Rights Reserved.",
     'text_about_us' => "Passionate avout recepi, we give our best to render our alimentation so good that you can't belive you can taste. Go, don't be shy!",
     'About' => "About",
+    'titre_About' => "About",
     'learn_more' => "Learn more about us",
     'Pricing' => "Pricing",
 ];
