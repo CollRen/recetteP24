@@ -24,6 +24,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //Schema::defaultStringLength(191);
         Paginator::useBootstrap();
+        // Il faut trouver une façon d'envoyer la valeur local en ou fr ici
         View::share('locale', 'en');
     }
 
