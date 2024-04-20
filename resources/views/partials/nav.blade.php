@@ -20,27 +20,27 @@
 
       <div class="hidden lg:flex lg:gap-x-12">
           <a href="/"
-              class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('/') ? 'text-red-900' : 'text-gray-900' }}">@lang('Home')</a>
+              class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('/') ? 'text-red-900 underline' : 'text-gray-900' }}">@lang('Home')</a>
           <a href="/forfait"
-              class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('forfait') ? 'text-red-900' : 'text-gray-900' }}">@lang('Pricing')</a>
+              class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('forfait') ? 'text-red-900 underline' : 'text-gray-900' }}">@lang('Pricing')</a>
           <a href="/contact"
-              class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('contact') ? 'text-red-900' : 'text-gray-900' }}">Contact</a>
+              class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('contact') ? 'text-red-900 underline' : 'text-gray-900' }}">Contact</a>
           <a href="/about"
-              class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('about') ? 'text-red-900' : 'text-gray-900' }}">@lang('About')</a>
+              class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('about') ? 'text-red-900 underline' : 'text-gray-900' }}">@lang('About')</a>
           <a href="#"
-              class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('histoire') ? 'text-red-900' : 'text-gray-900' }}">@lang('Our Story')</a>
+              class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('histoire') ? 'text-red-900 underline' : 'text-gray-900' }}">@lang('Our Story')</a>
           <ul class="dropdown-menu">
-              <li><a class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('voir') ? 'text-red-900' : 'text-gray-900' }}" href="{{ route('user.create') }}">@lang('New User')</a></li>
-              <li><a class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('voir') ? 'text-red-900' : 'text-gray-900' }}" href="{{ route('user.index') }}">@lang('Users')</a></li>
+              <li><a class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('voir') ? 'text-red-900 underline' : 'text-gray-900' }}" href="{{ route('user.create') }}">@lang('New User')</a></li>
+              <li><a class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('voir') ? 'text-red-900 underline' : 'text-gray-900' }}" href="{{ route('user.index') }}">@lang('Users')</a></li>
           </ul>
           <ul class="dropdown-menu">
-              <li><a class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('voir') ? 'text-red-900' : 'text-gray-900' }}" href="{{ route('lang', 'en') }}">@lang('English')</a></li>
-              <li><a class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('voir') ? 'text-red-900' : 'text-gray-900' }}" href="{{ route('lang', 'fr') }}">@lang('French')</a></li>
+              <li><a class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('voir') ? 'text-red-900 underline' : 'text-gray-900' }}" href="{{ route('lang', 'en') }}">@lang('English')</a></li>
+              <li><a class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('voir') ? 'text-red-900 underline' : 'text-gray-900' }}" href="{{ route('lang', 'fr') }}">@lang('French')</a></li>
           </ul>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#"
-              class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('login') ? 'text-red-900' : 'text-gray-900' }}">Connexion
+              class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('login') ? 'text-red-900 underline' : 'text-gray-900' }}">Connexion
               <span aria-hidden="true">&rarr;</span></a>
       </div>
       <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown hover <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
