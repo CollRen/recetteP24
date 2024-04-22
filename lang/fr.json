@@ -9,11 +9,13 @@
     "Unfinished":"Inachevé",
     "Language":"Langue",
     "English":"English",
-    "French":"Français",
+    "French":"Anglais",
     "Pricing":"Forfaits",
     "About":"À propos",
     "Our Story":"Notre histoire",
     "Contact":"Contact",
     "Stay connected":"Restons connecté",
-    "Home":"Accueil"
+    "Home":"Accueil",
+    "Choose your plan":"Choisissez votre plan",
+    "en":"en"
 }

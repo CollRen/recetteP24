@@ -11,7 +11,7 @@
   
     <div class="max-w-md mx-auto mb-14 text-center">
       <h1 class="text-4xl font-semibold mb-6 lg:text-5xl"><span class="text-clr-pri2">Plans</span>Flexibles </h1>
-      <p class="text-xl text-gray-500 font-medium">Choisissez votre plan.</p>
+      <p class="text-xl text-gray-500 font-medium">@lang(trans('Choose your plan'))</p>
     </div>
   
     <div class="flex flex-col justify-between items-center lg:flex-row lg:items-start">

@@ -35,8 +35,13 @@ h2>:first-child, p {
     font-family: "Nobile";
 }
 
-a, h3, h4 {
+a, h3, h4, button {
     font-family: "Exo";
+}
+
+.btn {
+    font-family: "Exo";
+
 }
 
 h5 {
