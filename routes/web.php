@@ -20,14 +20,14 @@ use App\Http\Controllers\CategoryController;
 
 Route::get('/lang/{locale}', [SetLocaleController::class, 'index'])->name('lang');
 
-Route::get('/create/task', [TaskController::class, 'create'])->name('task.create');
-Route::post('/create/task', [TaskController::class, 'store'])->name('task.store');
+Route::get('/task/create', [TaskController::class, 'create'])->name('task.create');
+Route::post('/task/create', [TaskController::class, 'store'])->name('task.store');
 Route::get('/tasks', [TaskController::class, 'index'])->name('task.index');
 Route::get('/task/{task}', [TaskController::class, 'show'])->name('task.show');
-Route::get('/edit/task/{task}', [TaskController::class, 'edit'])->name('task.edit');
-Route::put('/edit/task/{task}', [TaskController::class, 'update'])->name('task.update');
+Route::get('/task/edit/{task}', [TaskController::class, 'edit'])->name('task.edit');
+Route::put('/task/edit/{task}', [TaskController::class, 'update'])->name('task.update');
 Route::delete('/task/{task}', [TaskController::class, 'destroy'])->name('task.delete');
-Route::get('/completed/task/{completed}', [TaskController::class, 'completed'])->name('task.completed');
+Route::get('/task/completed/{completed}', [TaskController::class, 'completed'])->name('task.completed');
 
 // Pour valider l'identité de l'utilisateur pour cette route
 // the /tasks route is protected by the auth middleware, which ensures that only authenticated users can access the route.

@@ -10,7 +10,7 @@
 
 
 
-      <div class="hidden lg:flex lg:gap-x-12">
+      <div class="hidden items-center lg:flex lg:gap-x-12">
 
           <a href="/"
               class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('/') ? 'text-red-900 underline' : 'text-gray-900' }}">@lang('Home')</a>
@@ -20,30 +20,47 @@
               class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('contact') ? 'text-red-900 underline' : 'text-gray-900' }}">Contact</a>
           <a href="/about"
               class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('about') ? 'text-red-900 underline' : 'text-gray-900' }}">@lang('About')</a>
-  {{--         <a href="#"
+          {{--         <a href="#"
               class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('histoire') ? 'text-red-900 underline' : 'text-gray-900' }}">@lang('Our Story')</a> --}}
 
-<button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="btn btn-primary text-gray-900 hover:bg-clr-pale1 focus:ring-3 focus:outline-none focus:ring-clr-sec2 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-clr-sec2 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Language <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-</svg>
-</button>
 
 
 
-<!-- Dropdown menu Language-->
-<div id="dropdown" class="hidden divide-clr-pale1 rounded-lg shadow w-44 dark:bg-gray-700">
-    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-      @if(Config::get('app.locale') == 'en')
-      <li>
-        <a href="{{ route('lang', 'fr') }}" class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">Français</a>
-      </li>
-    @else
-      <li>
-        <a href="{{ route('lang', 'en') }}" class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">English</a>
-      </li>
-      @endif
-    </ul>
-</div>
+          <!-- Language-->
+
+          @if (Config::get('app.locale') == 'en')
+              <a href="{{ route('lang', 'fr') }}"
+                  class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">FR</a>
+          @else
+              <a href="{{ route('lang', 'en') }}"
+                  class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">EN</a>
+          @endif
+
+
+          <!-- Dropdown menu Language-->
+          <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+              class="btn btn-primary text-gray-900 hover:bg-clr-pale1 focus:ring-3 focus:outline-none focus:ring-clr-sec2 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-clr-sec2 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              type="button">Tasks<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m1 1 4 4 4-4" />
+              </svg>
+          </button>
+          <div id="dropdown" class="hidden divide-clr-pale1 rounded-lg shadow w-44 dark:bg-gray-700">
+              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+
+                      <li>
+                          <a href="/task/create"
+                              class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">@lang('Create')</a>
+                      </li>
+
+                      <li>
+                          <a href="/task"
+                              class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">@lang('List')</a>
+                      </li>
+
+              </ul>
+          </div>
 
 
 
