@@ -55,7 +55,7 @@
                       </li>
 
                       <li>
-                          <a href="/task"
+                          <a href="/tasks"
                               class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">@lang('List')</a>
                       </li>
 
