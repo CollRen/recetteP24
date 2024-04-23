@@ -33,12 +33,15 @@
 <!-- Dropdown menu Language-->
 <div id="dropdown" class="hidden divide-clr-pale1 rounded-lg shadow w-44 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+      @if(Config::get('app.locale') == 'en')
       <li>
         <a href="{{ route('lang', 'fr') }}" class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">Français</a>
       </li>
+    @else
       <li>
         <a href="{{ route('lang', 'en') }}" class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">English</a>
       </li>
+      @endif
     </ul>
 </div>
 

@@ -14,7 +14,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+
+/*         $locale = session()->get('locale', 'fr');
+        // dd($locale);
+        app('translator')->setLocale($locale); */
     }
 
     /**
