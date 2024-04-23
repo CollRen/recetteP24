@@ -16,7 +16,7 @@
           </button>
         </div>
         <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="-my-6 divide-y divide-clr-pri1/10">
             <div class="space-y-2 py-6">
               <a href="/forfait"
               class="text-sm font-semibold leading-6  clr-sec2 -mx-3 block rounded-lg px-3 py-2 {{ request()->is('forfait') ? 'text-red-900 underline' : 'text-gray-900' }}">@lang('Pricing')</a>

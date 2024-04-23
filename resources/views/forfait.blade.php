@@ -11,7 +11,7 @@
   
     <div class="max-w-md mx-auto mb-14 text-center">
       <h1 class="text-4xl font-semibold mb-6 lg:text-5xl"><span class="text-clr-pri2">Plans</span>Flexibles </h1>
-      <p class="text-xl text-gray-500 font-medium">@lang(trans('Choose your plan'))</p>
+      <p class="text-xl text-clr-pri1 font-medium">@lang(trans('Choose your plan'))</p>
     </div>
   
     <div class="flex flex-col justify-between items-center lg:flex-row lg:items-start">
@@ -20,11 +20,11 @@
         <div class="mb-7 pb-7 flex items-center border-b border-clr-pale1">
           <img src="https://res.cloudinary.com/williamsondesign/abstract-1.jpg"  alt="" class="rounded-3xl w-20 h-20" />
           <div class="ml-5">
-            <span class="block text-2xl font-semibold">Base</span>
-            <span><span class="font-medium text-gray-500 text-xl align-top">$&thinsp;</span><span class="text-3xl font-bold">10 </span></span><span class="text-gray-500 font-medium">/ utilisateur</span>
+            <span class="block text-2xl font-semibold">Utilisateur</span>
+            <span><span class="font-medium text-clr-pri1 text-xl align-top">$&thinsp;</span><span class="text-3xl font-bold">10 </span></span><span class="text-clr-pri1 font-medium">/ utilisateur</span>
           </div>
         </div>
-        <ul class="mb-7 font-medium text-gray-500">
+        <ul class="mb-7 font-medium text-clr-pri1">
           <li class="flex text-lg mb-2">
             <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
             <span class="ml-3">Débutant en création de <span class="text-black">recette</span></span>
@@ -38,9 +38,9 @@
             <span class="ml-3"><span class="text-black">5 TB</span> données en nuage</span>
           </li>
         </ul>
-        <a href="#/" class="flex justify-center items-center bg-clr-pri2 rounded-xl py-5 px-4 text-center text-white text-xl">
+        <a href="#/" class="flex justify-center items-center bg-clr-pri2 rounded-xl py-5 px-4 text-center text-clr-sec1 text-xl">
           Choisir
-          <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
+          <img src="{{Vite::asset('resources/img/arrow-right.svg')}}" class="ml-2" />
         </a>
       </div>
   
@@ -48,27 +48,27 @@
         <div class="mb-8 pb-8 flex items-center border-b border-clr-pri1">
           <img src="https://res.cloudinary.com/williamsondesign/abstract-2.jpg"  alt="" class="rounded-3xl w-20 h-20" />
           <div class="ml-5">
-            <span class="block text-3xl font-semibold text-white">Base plus</span>
-            <span><span class="font-medium text-xl align-top">$&thinsp;</span><span class="text-3xl font-bold text-white">24 </span></span><span class="font-medium">/ utilisateur</span>
+            <span class="block text-3xl font-semibold text-clr-pale">Base plus</span>
+            <span><span class="font-medium text-xl align-top">$&thinsp;</span><span class="text-3xl font-bold text-clr-pale">24 </span></span><span class="font-medium">/ utilisateur</span>
           </div>
         </div>
         <ul class="mb-10 font-medium text-xl">
           <li class="flex mb-6">
             <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
-            <span class="ml-3">Tout du fortait <span class="text-white">Base</span></span>
+            <span class="ml-3">Tout du fortait <span class="text-clr-pale">Base</span></span>
           </li>
           <li class="flex mb-6">
             <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
-            <span class="ml-3">accès aux ingrédients <span class="text-white">Flexible</span></span>
+            <span class="ml-3">@lang('Accès aux ingrédients')<span class="text-clr-pale"> Flexible</span></span>
           </li>
           <li class="flex">
             <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
-            <span class="ml-3"><span class="text-white">15 TB</span> données en nuage</span>
+            <span class="ml-3"><span class="text-clr-pale">Illimité</span> Recette des autres utilisateur</span>
           </li>
         </ul>
-        <a href="#/" class="flex justify-center items-center bg-clr-pri2 rounded-xl py-6 px-4 text-center text-white text-2xl">
+        <a href="#/" class="flex justify-center items-center bg-clr-pri1 rounded-xl py-6 px-4 text-center text-clr-sec1 text-2xl">
           Choisir
-          <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
+          <img src="{{Vite::asset('resources/img/arrow-right.svg')}}" class="ml-2" />
         </a>
       </div>
   
@@ -77,10 +77,10 @@
           <img src="https://res.cloudinary.com/williamsondesign/abstract-3.jpg"  alt="" class="rounded-3xl w-20 h-20" />
           <div class="ml-5">
             <span class="block text-2xl font-semibold">Base ++</span>
-            <span><span class="font-medium text-gray-500 text-xl align-top">$&thinsp;</span><span class="text-3xl font-bold">35 </span></span><span class="text-gray-500 font-medium">/ utilisateur</span>
+            <span><span class="font-medium text-clr-pri1 text-xl align-top">$&thinsp;</span><span class="text-3xl font-bold">35 </span></span><span class="text-clr-pri1 font-medium">/ utilisateur</span>
           </div>
         </div>
-        <ul class="mb-7 font-medium text-gray-500">
+        <ul class="mb-7 font-medium text-clr-pri1">
           <li class="flex text-lg mb-2">
             <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
             <span class="ml-3">Tout du forfait <span class="text-black">Base +</span></span>
@@ -91,12 +91,12 @@
           </li>
           <li class="flex text-lg">
             <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
-            <span class="ml-3"><span class="text-black">Données en nuage</span> Sans limite</span>
+            <span class="ml-3"><span class="text-black">Nombre illimité de recette</span> Sans limite</span>
           </li>
         </ul>
-        <a href="#/" class="flex justify-center items-center bg-clr-pri2 rounded-xl py-5 px-4 text-center text-white text-xl">
+        <a href="#/" class="flex justify-center items-center bg-clr-pri2 rounded-xl py-5 px-4 text-center text-clr-sec1 text-xl">
           Choisir
-          <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
+          <img src="{{Vite::asset('resources/img/arrow-right.svg')}}" class="ml-2" />
         </a>
       </div>
   

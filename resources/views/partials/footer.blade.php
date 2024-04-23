@@ -54,11 +54,11 @@ $annee = date('Y');
                             <ul class="list-unstyled">
                                 <li>
                                     <a class="text-clr-pri1 hover:text-clr-pri1 font-semibold block pb-2 text-sm"
-                                        href="https://creative-tim.com/terms?ref=njs-profile">Termes &amp; Conditions</a>
+                                        href="#">Termes &amp; Conditions</a>
                                 </li>
                                 <li>
                                     <a class="text-clr-pri1 hover:text-clr-pri1 font-semibold block pb-2 text-sm"
-                                        href="https://creative-tim.com/privacy?ref=njs-profile">Vie privée</a>
+                                        href="#">Vie privée</a>
                                 </li>
                                 <li>
                                     <a class="text-clr-pri1 hover:text-clr-pri1 font-semibold block pb-2 text-sm"
@@ -76,7 +76,7 @@ $annee = date('Y');
                         Copyright © <span id="get-current-year">@php
                             echo $annee;
                         @endphp</span><a
-                            href="https://www.creative-tim.com/product/notus-js"
+                            href="#"
                             class="text-clr-pri2 hover:text-gray-800" target="_blank"> Créé par
                             <a href="https://www.creative-tim.com?ref=njs-profile"
                                 class="text-clr-pri2 hover:text-clr-pri1">RDM WEB</a>.

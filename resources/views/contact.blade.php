@@ -26,11 +26,11 @@
             <div class="grid md:grid-cols-2">
                 <div class="h-full pr-6">
                     <p class="mt-3 mb-12 text-lg text-clr-pri1 dark:text-slate-400">
-                        Là où vous nous attendez le moins, nous ne nous immerons pas... c'est la moindre des choses&nbsp;!
+                        Là où vous nous attendez le moins, nous ne nous y immiscerons pas... c'est la moindre des choses&nbsp;!
                     </p>
                     <ul class="mb-6 md:mb-0">
                         <li class="flex">
-                            <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50">
+                            <div class="flex h-10 w-10 items-center justify-center rounded bg-clr-pri1 text-gray-50">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="h-6 w-6">
@@ -48,7 +48,7 @@
                             </div>
                         </li>
                         <li class="flex">
-                            <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50">
+                            <div class="flex h-10 w-10 items-center justify-center rounded bg-clr-pri1 text-gray-50">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="h-6 w-6">
@@ -67,7 +67,7 @@
                             </div>
                         </li>
                         <li class="flex">
-                            <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50">
+                            <div class="flex h-10 w-10 items-center justify-center rounded bg-clr-pri1 text-gray-50">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="h-6 w-6">
@@ -85,7 +85,7 @@
                     </ul>
                 </div>
                 <div class="card h-fit max-w-6xl p-5 md:p-12" id="form">
-                    <h2 class="mb-4 text-2xl font-bold">Vous êtes prêts&nbsp;?</h2>
+                    <h2 class="mb-4 text-2xl font-bold text-clr-pri1">Vous êtes prêts&nbsp;?</h2>
                     <form id="contactForm">
                         <div class="mb-6">
                             <div class="mx-0 mb-1 sm:mb-4">
@@ -101,7 +101,7 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0">Envoyer</button>
+                            <button type="submit" class="w-full bg-clr-pri1 text-white px-6 py-3 font-xl rounded-md sm:mb-0">Envoyer</button>
                         </div>
                     </form>
                 </div>
