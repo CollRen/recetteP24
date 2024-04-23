@@ -1,15 +1,15 @@
-@extends('layouts.app')
+@extends('partials.base')
 @section('title', 'Users')
 @section('content')
     <h1 class="mt-5 mb-4">Users</h1>
-    <div class="row justify-content-center mt-5 mb-5">
-        <div class="col-md-12">
-            <div class="card mt-3">
-                <div class="card-header">
-                    <h5 class="card-title">Users</h5>
+    <div class="flex flex-wrap  justify-center mt-5 mb-5">
+        <div class="md:w-full pr-4 pl-4">
+            <div class="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300 mt-3">
+                <div class="py-3 px-6 mb-0 bg-gray-200 border-b-1 border-gray-300 text-gray-900">
+                    <h5 class="mb-3">Users</h5>
                 </div>
-                <div class="card-body">
-                    <table class="table table-striped">
+                <div class="flex-auto p-6">
+                    <table class="w-full max-w-full mb-4 bg-transparent table-striped">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -26,7 +26,7 @@
                                     <td>{{ $user->name }}</td>
                                     <td>
                                         <a
-                                            href="{{ route('user.edit', $user->id) }}"class="btn btn-sm btn-outline-success">Edit</a>
+                                            href="{{ route('user.edit', $user->id) }}"class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  text-green-500 border-green-500 hover:bg-green-500 hover:text-white bg-white hover:green-600">Edit</a>
                                     </td>
                                 </tr>
                             @endforeach

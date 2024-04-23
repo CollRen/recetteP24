@@ -1,8 +1,8 @@
   {{-- @php $locale = session()->get('locale'); @endphp --}}
   <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
-          <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Your Company</span>
+          <a href="/" class="-m-1.5 p-1.5">
+              <span class="sr-only">{{ config('app.name') }}</span>
               <img class="h-8 w-auto" src="{{ Vite::asset('resources/img/pexels-eva-bronzini.jpeg') }}" alt="">
           </a>
       </div>
@@ -55,7 +55,16 @@
                       </li>
 
                       <li>
-                          <a href="/tasks"
+                          <a href="{{route('user.index')}}"
+                              class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">@lang('List')</a>
+                      </li>
+                      <li>
+                          <a href="{{ route('user.create') }}"
+                              class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">@lang('Create')</a>
+                      </li>
+
+                      <li>
+                          <a href="/users"
                               class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">@lang('List')</a>
                       </li>
 
@@ -68,8 +77,8 @@
 
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#"
-              class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('login') ? 'text-red-900 underline' : 'text-gray-900' }}">Connexion
+          <a href="{{ route('login') }}"
+              class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('login') ? 'text-red-900 underline' : 'text-gray-900' }}">@lang('Login')
               <span aria-hidden="true">&rarr;</span></a>
       </div>
 
