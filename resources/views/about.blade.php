@@ -5,7 +5,7 @@
 @section('content')
 
 <body class="mt-24">
-<section class="bg-gray-100">
+<section class="bg-clr-sec2 bg-opacity-5">
     <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
             <div class="max-w-lg">
