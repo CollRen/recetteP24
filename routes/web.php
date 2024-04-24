@@ -37,6 +37,7 @@ Route::get('/task/completed/{completed}', [TaskController::class, 'completed'])-
 
 
 Route::get('/users', [UserController::class, 'index'])->name('user.index');
+Route::get('/users/index2', [UserController::class, 'index2'])->name('user.index2');
 Route::get('/registration', [UserController::class, 'create'])->name('user.create');
 Route::post('/registration', [UserController::class, 'store'])->name('user.store');
 Route::get('/edit/user/{user}', [UserController::class, 'edit'])->name('user.edit');

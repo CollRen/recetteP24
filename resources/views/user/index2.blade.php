@@ -21,12 +21,12 @@
                         <tbody>
                             @foreach ($users as $user)
                                 <tr>
-                                    <th>{{ $user->id }}</th>
+                                    <th scope="row">{{ $user->id }}</th>
                                     <td>{{ $user->name }}</td>
-                                    <td>{{ $user->email }}</td>
+                                    <td>{{ $user->name }}</td>
                                     <td>
                                         <a
-                                            href="{{ route('user.edit', $user->id) }}"class="inline-block text-xs  text-green-500 border-green-500 hover:bg-green-500 hover:text-white bg-white hover:green-600">Edit</a>
+                                            href="{{ route('user.edit', $user->id) }}"class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  text-green-500 border-green-500 hover:bg-green-500 hover:text-white bg-white hover:green-600">Edit</a>
                                     </td>
                                 </tr>
                             @endforeach

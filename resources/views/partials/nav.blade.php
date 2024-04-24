@@ -55,7 +55,7 @@
                       </li>
 
                       <li>
-                          <a href="{{route('user.index')}}"
+                          <a href="{{route('task.index')}}"
                               class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">@lang('List')</a>
                       </li>
                       <li>

@@ -11,17 +11,17 @@ return new class extends Migration
      */
     public function up(): void
 {
-    Schema::table('tasks', function (Blueprint $table) {
-        $table->foreignId('category_id')->nullable()->constrained('categories');
-    });
+/*     Schema::table('tasks', function (Blueprint $table) {
+        $table->foreignId('category_id')->nullable()->constrained('category');
+    }); */
 }
 
 public function down(): void
 {
-    Schema::table('tasks', function (Blueprint $table) {
+/*     Schema::table('tasks', function (Blueprint $table) {
         $table->dropForeign(['category_id']);
         $table->dropColumn('category_id');
-    });
+    }); */
 }
 
 };
