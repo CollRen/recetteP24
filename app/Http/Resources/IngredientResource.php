@@ -16,7 +16,7 @@ class IngredientResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'ingredient' => isset($this->ingredient[app()->getLocale()]) ? $this->ingredient[app()->getLocale()] : $this->ingredient['en']
+            'ingredientt' => isset($this->ingredient[app()->getLocale()]) ? $this->ingredient[app()->getLocale()] : $this->ingredient['en']
         ];
     }
 }

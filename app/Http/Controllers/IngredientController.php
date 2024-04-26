@@ -38,9 +38,9 @@ class IngredientController extends Controller
 /*             'fr' => $request->ingredient_fr, */
         ];
         if($request->ingredient_fr != null) { $ingredient = $ingredient + ['fr' => $request->ingredient_fr];};
-        
+        // dd($ingredient);
         Ingredient::create([
-            'ingredient' => $ingredient
+            'ingredientt' => $ingredient
         ]);
         return back()->withSuccess('Ingredient created successfully!');
     }
@@ -59,7 +59,7 @@ class IngredientController extends Controller
      */
     public function edit(Ingredient $ingredient)
     {   
-        return view('ingredient.edit', ['ingredient'=>$ingredient['ingredient']]);
+        return view('ingredient.edit', ['ingredient' => $ingredient]);
     }
 
     /**
@@ -67,6 +67,7 @@ class IngredientController extends Controller
      */
     public function update(Request $request, Ingredient $ingredient)
     {
+        
         $request->validate([
             'ingredient_en' => 'required|max:30',
             'ingredient_fr' => 'required|max:30',
@@ -77,8 +78,9 @@ class IngredientController extends Controller
             'fr' => $request->ingredient_fr,
         ];
         
+        
         $ingredient->update([
-            'ingredient' => $laIngredient
+            'ingredientt' => $laIngredient
         ]);
 
         return redirect()->route('ingredient.edit', $ingredient->id)->with('success', 'Ingredient updated successfully.');

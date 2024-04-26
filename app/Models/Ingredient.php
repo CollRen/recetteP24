@@ -11,9 +11,9 @@ class Ingredient extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['ingredient'];
+    protected $fillable = ['ingredientt'];
 
-    protected function ingredient(): Attribute
+    protected function ingredientt(): Attribute
     {
         return Attribute::make(
             get: fn($value) => json_decode($value, true),
@@ -22,7 +22,7 @@ class Ingredient extends Model
     }
 
     static public function ingredients(){
-        $resource = IngredientResource::collection(self::select()->orderBy('ingredient_nom')->get());
+        $resource = IngredientResource::collection(self::select()->orderBy('ingredientt')->get());
         $data = json_encode($resource);
         return json_decode($data, true);
     }
