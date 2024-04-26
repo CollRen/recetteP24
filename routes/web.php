@@ -53,36 +53,9 @@ Route::get('/logout', [AuthController::class, 'destroy'])->name('logout');
 /**
  * Ces routes peuvent sevir de template
  */
-Route::prefix('/category')->name('category.')->group(function () {
-Route::get('/create', [CategoryController::class, 'create'])->name('create');
-Route::post('/create', [CategoryController::class, 'store'])->name('store');
-Route::get('/category', [CategoryController::class, 'index'])->name('index');
-Route::get('/{category}', [CategoryController::class, 'show'])->name('show');
-Route::get('/edit/{category}', [CategoryController::class, 'edit'])->name('edit');
-Route::put('/edit/{category}', [CategoryController::class, 'update'])->name('update');
-Route::delete('/{category}', [CategoryController::class, 'destroy'])->name('delete');
-});
-
-Route::prefix('/ingredient')->name('ingredient.')->group(function () {
-Route::get('/create', [IngredientController::class, 'create'])->name('create');
-Route::post('/create', [IngredientController::class, 'store'])->name('store');
-Route::get('/ingredients', [IngredientController::class, 'index'])->name('index');
-Route::get('/{ingredient}', [IngredientController::class, 'show'])->name('show');
-Route::get('/edit/{ingredient}', [IngredientController::class, 'edit'])->name('edit');
-Route::put('/edit/{ingredient}', [IngredientController::class, 'update'])->name('update');
-Route::delete('/{ingredient}', [IngredientController::class, 'destroy'])->name('delete');
-});
-
-
-Route::prefix('/umesure')->name('umesure.')->group(function () {
-Route::get('/create', [UmesureController::class, 'create'])->name('create');
-Route::post('/create', [UmesureController::class, 'store'])->name('store');
-Route::get('/Umesures', [UmesureController::class, 'index'])->name('index');
-Route::get('/{Umesure}', [UmesureController::class, 'show'])->name('show');
-Route::get('/edit/{Umesure}', [UmesureController::class, 'edit'])->name('edit');
-Route::put('/edit/{Umesure}', [UmesureController::class, 'update'])->name('update');
-Route::delete('/{Umesure}', [UmesureController::class, 'destroy'])->name('delete');
-});
+Route::resource("/category", IngredientController::class);
+Route::resource("/ingredient", IngredientController::class);
+Route::resource("/umesure", IngredientController::class);
 
 
 Route::get('/password/forgot', [UserController::class, 'forgot'])->name('user.forgot');
