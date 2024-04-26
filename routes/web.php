@@ -8,6 +8,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SetLocaleController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\IngredientController;
+use App\Http\Controllers\UmesureController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -70,6 +71,17 @@ Route::get('/{ingredient}', [IngredientController::class, 'show'])->name('show')
 Route::get('/edit/{ingredient}', [IngredientController::class, 'edit'])->name('edit');
 Route::put('/edit/{ingredient}', [IngredientController::class, 'update'])->name('update');
 Route::delete('/{ingredient}', [IngredientController::class, 'destroy'])->name('delete');
+});
+
+
+Route::prefix('/umesure')->name('umesure.')->group(function () {
+Route::get('/create', [UmesureController::class, 'create'])->name('create');
+Route::post('/create', [UmesureController::class, 'store'])->name('store');
+Route::get('/Umesures', [UmesureController::class, 'index'])->name('index');
+Route::get('/{Umesure}', [UmesureController::class, 'show'])->name('show');
+Route::get('/edit/{Umesure}', [UmesureController::class, 'edit'])->name('edit');
+Route::put('/edit/{Umesure}', [UmesureController::class, 'update'])->name('update');
+Route::delete('/{Umesure}', [UmesureController::class, 'destroy'])->name('delete');
 });
 
 
