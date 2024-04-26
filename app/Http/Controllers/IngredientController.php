@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreIngredientsRequest;
-use App\Http\Requests\UpdateIngredientsRequest;
 use App\Models\Ingredient;
+use Illuminate\Http\Request;
 
 class IngredientController extends Controller
 {
@@ -21,21 +20,36 @@ class IngredientController extends Controller
      */
     public function create()
     {
-        //
+        return view('ingredient.create');
     }
+    
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreIngredientsRequest $request)
+    public function store(Request $request)
     {
-        //
+        $request->validate([
+            'ingredient_en' => 'required|max:30',
+            'ingredient_fr' => 'required|max:30',
+        ]);
+        $ingredient = [
+            'en' => $request->ingredient_en,
+/*             'fr' => $request->ingredient_fr, */
+        ];
+        if($request->ingredient_fr != null) { $ingredient = $ingredient + ['fr' => $request->ingredient_fr];};
+        
+        Ingredient::create([
+            'ingredient' => $ingredient
+        ]);
+        return back()->withSuccess('Ingredient created successfully!');
     }
+    
 
     /**
      * Display the specified resource.
      */
-    public function show(Ingredient $ingredients)
+    public function show(Ingredient $ingredient)
     {
         //
     }
@@ -43,23 +57,38 @@ class IngredientController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Ingredient $ingredients)
-    {
-        //
+    public function edit(Ingredient $ingredient)
+    {   
+        return view('ingredient.edit', ['ingredient'=>$ingredient['ingredient']]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateIngredientsRequest $request, Ingredient $ingredients)
+    public function update(Request $request, Ingredient $ingredient)
     {
-        //
+        $request->validate([
+            'ingredient_en' => 'required|max:30',
+            'ingredient_fr' => 'required|max:30',
+        ]);
+
+        $laIngredient = [
+            'en' => $request->ingredient_en,
+            'fr' => $request->ingredient_fr,
+        ];
+        
+        $ingredient->update([
+            'ingredient' => $laIngredient
+        ]);
+
+        return redirect()->route('ingredient.edit', $ingredient->id)->with('success', 'Ingredient updated successfully.');
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Ingredient $ingredients)
+    public function destroy(Ingredient $ingredient)
     {
         //
     }

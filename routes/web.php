@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SetLocaleController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\IngredientController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,6 +60,16 @@ Route::get('/{category}', [CategoryController::class, 'show'])->name('show');
 Route::get('/edit/{category}', [CategoryController::class, 'edit'])->name('edit');
 Route::put('/edit/{category}', [CategoryController::class, 'update'])->name('update');
 Route::delete('/{category}', [CategoryController::class, 'destroy'])->name('delete');
+});
+
+Route::prefix('/ingredient')->name('ingredient.')->group(function () {
+Route::get('/create', [IngredientController::class, 'create'])->name('create');
+Route::post('/create', [IngredientController::class, 'store'])->name('store');
+Route::get('/ingredients', [IngredientController::class, 'index'])->name('index');
+Route::get('/{ingredient}', [IngredientController::class, 'show'])->name('show');
+Route::get('/edit/{ingredient}', [IngredientController::class, 'edit'])->name('edit');
+Route::put('/edit/{ingredient}', [IngredientController::class, 'update'])->name('update');
+Route::delete('/{ingredient}', [IngredientController::class, 'destroy'])->name('delete');
 });
 
 
