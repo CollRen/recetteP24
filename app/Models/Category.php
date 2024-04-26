@@ -17,6 +17,10 @@ class Category extends Model
         return $this->hasMany(Task::class);
     }
 
+    public function recettes(){
+        return $this->hasMany(Recette::class);
+    }
+
     protected function category(): Attribute
     {
         return Attribute::make(

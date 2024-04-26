@@ -22,7 +22,7 @@ class CategoryController extends Controller
     {
         return view('category.create');
     }
-    
+
 
     /**
      * Store a newly created resource in storage.
@@ -31,20 +31,21 @@ class CategoryController extends Controller
     {
         $request->validate([
             'category_en' => 'required|max:30',
-            'category_fr' => 'required|max:30',
+            'category_fr' => 'max:30',
         ]);
         $category = [
             'en' => $request->category_en,
-/*             'fr' => $request->category_fr, */
         ];
-        if($request->category_fr != null) { $category = $category + ['fr' => $request->category_fr];};
-        
+        if ($request->category_fr != null) {
+            $category = $category + ['fr' => $request->category_fr];
+        };
+
         Category::create([
             'category' => $category
         ]);
         return back()->withSuccess('Category created successfully!');
     }
-    
+
 
     /**
      * Display the specified resource.
@@ -58,8 +59,8 @@ class CategoryController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit(Category $category)
-    {   
-        return view('category.edit', ['category'=>$category['category']]);
+    {
+        return view('category.edit', ['category' => $category['category']]);
     }
 
     /**
@@ -76,13 +77,12 @@ class CategoryController extends Controller
             'en' => $request->category_en,
             'fr' => $request->category_fr,
         ];
-        
+
         $category->update([
             'category' => $laCategory
         ]);
 
         return redirect()->route('category.edit', $category->id)->with('success', 'Category updated successfully.');
-
     }
 
     /**
