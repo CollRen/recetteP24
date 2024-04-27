@@ -11,15 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ingredients', function (Blueprint $table) {
-            $table->id();
-            $table->json('ingredientt');
+        Schema::create('recette_has_etapes', function (Blueprint $table) {
+            $table->unsignedBigInteger('recette_id');
+            $table->unsignedBigInteger('ordre_id');
             $table->timestamps();
         });
     }
 
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
-        Schema::dropIfExists('ingredients');
+        Schema::dropIfExists('recette_has_etapes');
     }
 };

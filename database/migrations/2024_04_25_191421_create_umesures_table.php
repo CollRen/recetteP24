@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('Umesures', function (Blueprint $table) {
+        Schema::create('umesures', function (Blueprint $table) {
             $table->id();
-            $table->json('umesure');
+            $table->json('umesuree');
             $table->timestamps();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('Umesures');
+        Schema::dropIfExists('umesures');
     }
 };
