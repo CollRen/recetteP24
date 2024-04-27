@@ -20,7 +20,7 @@ class UmesureController extends Controller
      */
     public function create()
     {
-        return view('Umesure.create');
+        return view('umesure.create');
     }
     
 
@@ -30,26 +30,26 @@ class UmesureController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'Umesure_en' => 'required|max:30',
-            'Umesure_fr' => 'required|max:30',
+            'umesure_en' => 'required|max:30',
+            'umesure_fr' => 'required|max:30',
         ]);
-        $Umesure = [
-            'en' => $request->Umesure_en,
-/*             'fr' => $request->Umesure_fr, */
+        $umesure = [
+            'en' => $request->umesure_en,
+/*             'fr' => $request->umesure_fr, */
         ];
-        if($request->Umesure_fr != null) { $Umesure = $Umesure + ['fr' => $request->Umesure_fr];};
+        if($request->umesure_fr != null) { $umesure = $umesure + ['fr' => $request->umesure_fr];};
         
         Umesure::create([
-            'Umesure' => $Umesure
+            'umesuree' => $umesure
         ]);
-        return back()->withSuccess('Umesure created successfully!');
+        return back()->withSuccess('umesure created successfully!');
     }
     
 
     /**
      * Display the specified resource.
      */
-    public function show(Umesure $Umesure)
+    public function show(Umesure $umesure)
     {
         //
     }
@@ -57,15 +57,15 @@ class UmesureController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Umesure $Umesure)
+    public function edit(Umesure $umesure)
     {   
-        return view('Umesure.edit', ['Umesure'=>$Umesure['Umesure']]);
+        return view('umesure.edit', ['umesure'=>$umesure['umesure']]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Umesure $Umesure)
+    public function update(Request $request, Umesure $umesure)
     {
         $request->validate([
             'Umesure_en' => 'required|max:30',
@@ -73,22 +73,22 @@ class UmesureController extends Controller
         ]);
 
         $laUmesure = [
-            'en' => $request->Umesure_en,
-            'fr' => $request->Umesure_fr,
+            'en' => $request->umesure_en,
+            'fr' => $request->umesure_fr,
         ];
         
-        $Umesure->update([
-            'Umesure' => $laUmesure
+        $umesure->update([
+            'umesuree' => $laUmesure
         ]);
 
-        return redirect()->route('Umesure.edit', $Umesure->id)->with('success', 'Umesure updated successfully.');
+        return redirect()->route('umesure.edit', $umesure->id)->with('success', 'Umesure updated successfully.');
 
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Umesure $Umesure)
+    public function destroy(Umesure $umesure)
     {
         //
     }
