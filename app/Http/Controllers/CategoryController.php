@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+    }
     /**
      * Display a listing of the resource.
      */
@@ -29,19 +33,26 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        $this->jsonResponse($request);
+        
         $request->validate([
             'category_en' => 'required|max:30',
             'category_fr' => 'max:30',
         ]);
-        $category = [
+
+        $this->category = [
             'en' => $request->category_en,
         ];
         if ($request->category_fr != null) {
-            $category = $category + ['fr' => $request->category_fr];
+            $this->category = $this->category + ['fr' => $request->category_fr];
         };
 
+        
+
+        
+
         Category::create([
-            'category' => $category
+            'category' => $this->category
         ]);
         return back()->withSuccess('Category created successfully!');
     }

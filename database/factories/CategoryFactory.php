@@ -39,12 +39,12 @@ class CategoryFactory extends Factory
         $dinner->fr = 'Souper';
 
         $collation = new  \stdClass();
-        $collation->en = 'Main Dishes';
-        $collation->fr = 'Repas principal';
+        $collation->en = 'Collation';
+        $collation->fr = 'Collation';
 
         $apero = new  \stdClass();
         $apero->en = 'Apero';
-        $apero->fr = 'Apero';
+        $apero->fr = 'Apéro';
 
         $dejeuner = new  \stdClass();
         $dejeuner->en = 'Breakfast';
@@ -59,7 +59,7 @@ class CategoryFactory extends Factory
         }; */
 
         // $i n'augmente pas de valeur... changer manuellement la valeur et repasser le php artisan db:seed
-        $i = 6;
+        $i = 5;
         return [
             'category' => [$arrayCategory[$i]],
         ];

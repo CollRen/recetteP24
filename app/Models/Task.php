@@ -26,6 +26,6 @@ class Task extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class)->withDefault(['titre'=> 'Pas de tâche']);
+        return $this->belongsTo(User::class)->withDefault(['title'=> 'Pas de tâche']);
     }
 }

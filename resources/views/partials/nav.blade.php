@@ -50,17 +50,17 @@
               <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
 
                       <li>
-                          <a href="/task/create"
-                              class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">@lang('Create')</a>
+                          <a href="/ingredient/create"
+                              class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">Ingredient @lang('Create')</a>
                       </li>
 
                       <li>
-                          <a href="{{route('task.index')}}"
-                              class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">@lang('List')</a>
+                          <a href="{{route('ingredient.create')}}"
+                              class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">Ingredient @lang('Create')</a>
                       </li>
                       <li>
                           <a href="{{ route('user.create') }}"
-                              class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">@lang('Create')</a>
+                              class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">Inscription</a>
                       </li>
 
                       <li>

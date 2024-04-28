@@ -19,7 +19,7 @@
                     <h5 class="mb-3">Category</h5>
                 </div>
                 <div class="flex-auto p-6">
-                    <form  method="POST">
+                      method="POST">
                         @csrf
                         @method('PUT')
                         <div class="mb-3">

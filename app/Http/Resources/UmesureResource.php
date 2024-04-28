@@ -16,7 +16,7 @@ class UmesureResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'Umesure' => isset($this->Umesure[app()->getLocale()]) ? $this->Umesure[app()->getLocale()] : $this->Umesure['en']
+            'umesuree' => isset($this->Umesure[app()->getLocale()]) ? $this->Umesure[app()->getLocale()] : $this->Umesure['en']
         ];
     }
 }

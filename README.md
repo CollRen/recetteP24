@@ -1,5 +1,7 @@
 # Départ
 
+
+[belongToMany tutoriel](https://medium.com/@prevailexcellent/laravel-many-to-many-relationship-complete-tutorial-16025acd5450)
 Partir le serveur et Vite, dans un deuxième temps
 > php artisan serve
 > npm run dev

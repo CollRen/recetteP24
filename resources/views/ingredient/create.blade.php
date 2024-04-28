@@ -19,7 +19,7 @@
                     <h5 class="mb-3">Ingredient</h5>
                 </div>
                 <div class="flex-auto p-6">
-                    <form  method="POST">
+                    <form action="{{ route('ingredient.store') }}" method="POST">
                         @csrf
                         <div class="mb-3">
                             <label for="ingredient_en" class="form-label">Ingredient in English</label>

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Ordres>
  */
-class OrdresFactory extends Factory
+class OrdreFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -16,8 +16,9 @@ class OrdresFactory extends Factory
      */
     public function definition(): array
     {
-        return [
-            //
+        $n = 1;
+        return ['index' => $n+1  
         ];
+        $n++;
     }
 }

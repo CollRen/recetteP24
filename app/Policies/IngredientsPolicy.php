@@ -2,7 +2,7 @@
 
 namespace App\Policies;
 
-use App\Models\Ingredients;
+use App\Models\Ingredient;
 use App\Models\User;
 use Illuminate\Auth\Access\Response;
 
@@ -19,7 +19,7 @@ class IngredientsPolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, Ingredients $ingredients): bool
+    public function view(User $user, Ingredient $ingredient): bool
     {
         //
     }
@@ -35,7 +35,7 @@ class IngredientsPolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, Ingredients $ingredients): bool
+    public function update(User $user, Ingredient $ingredient): bool
     {
         //
     }
@@ -43,7 +43,7 @@ class IngredientsPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, Ingredients $ingredients): bool
+    public function delete(User $user, Ingredient $ingredient): bool
     {
         //
     }
@@ -51,7 +51,7 @@ class IngredientsPolicy
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, Ingredients $ingredients): bool
+    public function restore(User $user, Ingredient $ingredient): bool
     {
         //
     }
@@ -59,7 +59,7 @@ class IngredientsPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, Ingredients $ingredients): bool
+    public function forceDelete(User $user, Ingredient $ingredient): bool
     {
         //
     }

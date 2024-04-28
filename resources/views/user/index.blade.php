@@ -14,7 +14,7 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">User</th>
-                                <th scope="col">Tasks</th>
+                                <th scope="col">Recettes</th>
                                 <th scope="col">Edit</th>
                             </tr>
                         </thead>
