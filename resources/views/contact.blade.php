@@ -62,7 +62,7 @@
                             <div class="ml-4 mb-4">
                                 <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Contact
                                 </h3>
-                                <p class="text-clr-pri1 dark:text-slate-400">Mobile: +1 (514) 456-7890</p>
+                                <p class="text-clr-pri1 dark:text-slate-400">Mobile: +1 (514) 456-7890<x-badge :type="'success'" :message="'Attention'">Badge</x-badge></p>
                                 <p class="text-clr-pri1 dark:text-slate-400">Mail: ttrraiv@gmail.com</p>
                             </div>
                         </li>
