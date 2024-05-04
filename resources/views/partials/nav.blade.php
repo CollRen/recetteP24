@@ -7,19 +7,14 @@
           </a>
       </div>
 
-
-
-
       <div class="hidden items-center lg:flex lg:gap-x-12">
 
-          <a href="/"
-              class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('/') ? 'text-red-900 underline' : 'text-gray-900' }}">@lang('Home')</a>
-          <a href="/forfait"
-              class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('forfait') ? 'text-red-900 underline' : 'text-gray-900' }}">@lang('Pricing')</a>
-          <a href="/contact"
-              class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('contact') ? 'text-red-900 underline' : 'text-gray-900' }}">Contact</a>
-          <a href="/about"
-              class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('about') ? 'text-red-900 underline' : 'text-gray-900' }}">@lang('About')</a>
+          <x-menu-item>@lang('Home')</x-menu-item>
+          <x-menu-item :link="'forfait'">@lang('Pricing')</x-menu-item>
+          <x-menu-item :link="'contact'">Contact</x-menu-item>
+          <x-menu-item :link="'about'">@lang('About')</x-menu-item>
+
+
           {{--         <a href="#"
               class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('histoire') ? 'text-red-900 underline' : 'text-gray-900' }}">@lang('Our Story')</a> --}}
 
@@ -40,8 +35,8 @@
           <!-- Dropdown menu Language-->
           <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
               class="btn btn-primary text-gray-900 hover:bg-clr-pale1 focus:ring-3 focus:outline-none focus:ring-clr-sec2 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-clr-sec2 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              type="button">Tasks<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              type="button">Tasks<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="m1 1 4 4 4-4" />
               </svg>
@@ -49,24 +44,26 @@
           <div id="dropdown" class="hidden divide-clr-pale1 rounded-lg shadow w-44 dark:bg-gray-700">
               <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
 
-                      <li>
-                          <a href="/ingredient/create"
-                              class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">Ingredient @lang('Create')</a>
-                      </li>
+                  <li>
+                      <a href="/ingredient/create"
+                          class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">Ingredient
+                          @lang('Create')</a>
+                  </li>
 
-                      <li>
-                          <a href="{{route('ingredient.create')}}"
-                              class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">Ingredient @lang('Create')</a>
-                      </li>
-                      <li>
-                          <a href="{{ route('user.create') }}"
-                              class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">Inscription</a>
-                      </li>
+                  <li>
+                      <a href="{{ route('ingredient.create') }}"
+                          class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">Ingredient
+                          @lang('Create')</a>
+                  </li>
+                  <li>
+                      <a href="{{ route('user.create') }}"
+                          class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">Inscription</a>
+                  </li>
 
-                      <li>
-                          <a href="/users"
-                              class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">@lang('List')</a>
-                      </li>
+                  <li>
+                      <a href="/users"
+                          class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">@lang('List')</a>
+                  </li>
 
               </ul>
           </div>
