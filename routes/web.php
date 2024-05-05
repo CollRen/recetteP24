@@ -9,6 +9,7 @@ use App\Http\Controllers\SetLocaleController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\IngredientController;
 use App\Http\Controllers\UmesureController;
+use App\Http\Controllers\RecetteController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -64,6 +65,7 @@ Route::get('/logout', [AuthController::class, 'destroy'])->name('logout');
 }); */
 
 
+Route::resource("/recette", RecetteController::class);
 Route::resource("/ingredient", IngredientController::class);
 Route::resource("/umesure", UmesureController::class);
 Route::resource("/category", CategoryController::class);
@@ -97,6 +99,16 @@ Route::get('forfait', function () {
     return view('forfait');
     // return view('index');
 })->name("forfait");
+
+Route::get('collection', function () {
+    return view('collection');
+    // return view('index');
+})->name("collection");
+
+Route::get('product-collection', function () {
+    return view('product-collection');
+    // return view('index');
+})->name("product-collection");
 
 
 Route::get('contact', function () {
