@@ -110,6 +110,11 @@ Route::get('product-collection', function () {
     // return view('index');
 })->name("product-collection");
 
+Route::get('testimonial', function () {
+    return view('testimonial');
+    // return view('index');
+})->name("testimonial");
+
 
 Route::get('contact', function () {
     return view('contact');
