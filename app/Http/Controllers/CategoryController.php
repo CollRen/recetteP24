@@ -33,6 +33,8 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        // Pourrait aussi utiliser $cast dans Model
+        // Un peu comme fillable
         $this->jsonResponse($request);
         
         $request->validate([
@@ -63,7 +65,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+        dd($category);
     }
 
     /**
@@ -71,7 +73,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        return view('category.edit', ['category' => $category['category']]);
+        return view('category.edit', ['category' => $category]);
     }
 
     /**

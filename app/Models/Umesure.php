@@ -11,9 +11,9 @@ class Umesure extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['umesuree'];
+    protected $fillable = ['nom'];
 
-    protected function umesuree(): Attribute
+    protected function nom(): Attribute
     {
         return Attribute::make(
             get: fn($value) => json_decode($value, true),
@@ -21,8 +21,9 @@ class Umesure extends Model
         );
     }
 
-    static public function umesures(){
-        $resource = UmesureResource::collection(self::select()->orderBy('umesuree')->get());
+    static public function umesures()
+    {
+        $resource = UmesureResource::collection(self::select()->orderBy('nom')->get());
         $data = json_encode($resource);
         return json_decode($data, true);
     }

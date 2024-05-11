@@ -3,7 +3,7 @@
   
 
     @include('partials.nav')
-    @include('partials.nav-mobile')
+    {{-- @include('partials.nav-mobile') --}}
 
     
   </header>

@@ -40,7 +40,7 @@ class IngredientController extends Controller
         if($request->ingredient_fr != null) { $ingredient = $ingredient + ['fr' => $request->ingredient_fr];};
         // dd($ingredient);
         Ingredient::create([
-            'ingredientt' => $ingredient
+            'nom' => $ingredient
         ]);
         return back()->withSuccess('Ingredient created successfully!');
     }
@@ -80,7 +80,7 @@ class IngredientController extends Controller
         
         
         $ingredient->update([
-            'ingredientt' => $laIngredient
+            'nom' => $laIngredient
         ]);
 
         return redirect()->route('ingredient.edit', $ingredient->id)->with('success', 'Ingredient updated successfully.');

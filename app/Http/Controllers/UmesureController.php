@@ -22,7 +22,7 @@ class UmesureController extends Controller
     {
         return view('umesure.create');
     }
-    
+
 
     /**
      * Store a newly created resource in storage.
@@ -35,16 +35,19 @@ class UmesureController extends Controller
         ]);
         $umesure = [
             'en' => $request->umesure_en,
-/*             'fr' => $request->umesure_fr, */
+            /*             'fr' => $request->umesure_fr, */
         ];
-        if($request->umesure_fr != null) { $umesure = $umesure + ['fr' => $request->umesure_fr];};
-        
+        if ($request->umesure_fr != null) {
+            $umesure = $umesure + ['fr' => $request->umesure_fr];
+        }
+        ;
+
         Umesure::create([
-            'umesuree' => $umesure
+            'nom' => $umesure
         ]);
         return back()->withSuccess('umesure created successfully!');
     }
-    
+
 
     /**
      * Display the specified resource.
@@ -58,8 +61,8 @@ class UmesureController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit(Umesure $umesure)
-    {   
-        return view('umesure.edit', ['umesure'=>$umesure['umesure']]);
+    {
+        return view('umesure.edit', ['umesure' => $umesure['umesure']]);
     }
 
     /**
@@ -76,9 +79,9 @@ class UmesureController extends Controller
             'en' => $request->umesure_en,
             'fr' => $request->umesure_fr,
         ];
-        
+
         $umesure->update([
-            'umesuree' => $laUmesure
+            'nom' => $laUmesure
         ]);
 
         return redirect()->route('umesure.edit', $umesure->id)->with('success', 'Umesure updated successfully.');

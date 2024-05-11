@@ -6,10 +6,16 @@ use App\Http\Requests\StoreRecettesRequest;
 use App\Http\Requests\UpdateRecettesRequest;
 use App\Models\Recette;
 use App\Models\Ingredient;
-use GuzzleHttp\Psr7\Request;
+use App\Models\Category;
+use App\Models\User;
+use Illuminate\Http\Request;
 
-class RecettesController extends Controller
+class RecetteController extends Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+    }
 
 
     /**
@@ -39,9 +45,12 @@ class RecettesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Recette $recettes, Request $request)
+    public function show(Recette $recette, Request $request)
     {
-        $recette = Recette::find(1);
+
+        $category = Category::find(1)->recette;
+        dd($category);
+
 
         // Différentes façon d'obtenir les ingrédients
         // 1.
@@ -57,8 +66,9 @@ class RecettesController extends Controller
 
         //
         /**
-         * 2.3 (33 is the foreign key name of the model on which you are defining the relationship
-         * while the fourth argument is the foreign key name of the model that you are joining to:
+         * 2.3 (33 is the 
+         * foreign key name of the model on which you are defining the relationship
+         * 4th Arg: foreign key name of the model that you are joining to
          */
         return $this->belongsToMany(Ingredient::class, 'ingredient_recette', 'recette_id', 'ingredient_id');
 
