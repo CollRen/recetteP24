@@ -61,7 +61,7 @@ class CategoryFactory extends Factory
         // $i n'augmente pas de valeur... changer manuellement la valeur et repasser le php artisan db:seed
         $i = 5;
         return [
-            'category' => [$arrayCategory[$i]],
+            'category' => $arrayCategory[$i],
         ];
     }
 }
