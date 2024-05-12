@@ -31,7 +31,8 @@ class RecetteController extends Controller
      */
     public function create()
     {
-        //
+        $this->categories = Category::all();
+        return view('recette.create', $this->data);
     }
 
     /**
