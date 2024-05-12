@@ -43,10 +43,6 @@
                             <input type="number" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" id="temps_cuisson" name="temps_cuisson" value="{{old('temps_cuisson')}}">
                         </div>
 
-                        <div class="mb-3">
-                            <label for="user_id" class="form-label">Auteur</label>
-                            <input type="number" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" id="user_id" name="user_id" value="{{old('user_id')}}">
-                        </div>
 
 
                                 <label for="category_id">Recette category</label>

@@ -40,7 +40,19 @@ class RecetteController extends Controller
      */
     public function store(StoreRecettesRequest $request)
     {
-        //
+      
+        $category = $request->category;
+        $recette = new Recette();
+        $recette->titre = $request->titre;
+        $recette->description = $request->description;
+        $recette->category_id = $request->category_id;
+        $recette->temps_cuisson = $request->temps_cuisson;
+        $recette->temps_preparation = $request->temps_preparation;
+        $recette->user_id = 1;
+        $recette->save();
+
+        return view('recette.show', compact('recette'));
+
     }
 
     /**
@@ -48,10 +60,12 @@ class RecetteController extends Controller
      */
     public function show(Recette $recette, Request $request)
     {
+        $this->recette = Recette::find($recette->id);
+        $this->category = Category::find($recette->category_id);
+        $this->auteur = User::find($recette->user_id)->name;
 
-        $category = Category::find(1)->recette;
-        dd($category);
-
+        return view('recette.show', $this->data);
+       
 
         // Différentes façon d'obtenir les ingrédients
         // 1.
@@ -80,17 +94,41 @@ class RecetteController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Recette $recettes)
+    public function edit(Recette $recette)
     {
-        //
+        $this->recette = Recette::find($recette->id);
+        $this->category = Category::find($recette->category_id);
+        $this->auteur = User::find($recette->user_id)->name;
+
+        $this->categories = Category::all();
+        $this->auteurs = User::all();
+
+        return view('recette.edit', $this->data);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRecettesRequest $request, Recette $recettes)
+    public function update(UpdateRecettesRequest $request, Recette $recette)
     {
-        //
+        $category = $request->category;
+        $recette = Recette::find($recette->id);
+        $recette->titre = $request->titre;
+        $recette->description = $request->description;
+        $recette->category_id = $request->category_id;
+        $recette->temps_cuisson = $request->temps_cuisson;
+        $recette->temps_preparation = $request->temps_preparation;
+        $recette->user_id = 1;
+
+        $recette->update([
+            'category' => $category,
+            'titre' => $recette->titre,
+            'description' => $recette->description,
+            'temps_cuisson' => $recette->temps_cuisson,
+            'temps_preparation' => $recette->temps_preparation,
+        ]);
+
+        return redirect()->route('recette.edit', $recette->id)->with('success', 'Category updated successfully.');
     }
 
     /**
