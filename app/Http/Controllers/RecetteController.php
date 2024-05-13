@@ -41,13 +41,6 @@ class RecetteController extends Controller
      */
     public function store(StoreRecettesRequest $request)
     {
-        $this->titre = $request->titre;
-        $this->description = $request->description;
-        $this->category_id = $request->category_id;
-        $this->temps_cuisson = $request->temps_cuisson;
-        $this->temps_preparation = $request->temps_preparation;
-        $this->user_id = 1;
-        
         $this->recette = [
             'titre' => $request->titre,
             'description' => $request->description,
@@ -57,9 +50,11 @@ class RecetteController extends Controller
             'user_id' => 1
         ];
 
-        Recette::create($this->recette);
+        $this->recette = Recette::create($this->recette);
 
-        $this->uMesure = Umesure::all();
+        $this->uMesures = Umesure::all();
+
+
 
         return view('recette.add-ingredient', $this->data );
 

@@ -20,9 +20,9 @@ class Recette extends Model
         'category_id'
     ];
 
-    public function ingredient(): HasMany
+    public function ingredients(): HasMany
     {
-        return $this->hasMany(Ingredient::class)->withDefault(["titre'=> 'Pas d'ingrédient"]);
+        return $this->hasMany(Ingredient::class);
     }
 
     public function category()

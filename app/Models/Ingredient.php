@@ -6,24 +6,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use App\Http\Resources\IngredientResource;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Ingredient extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nom'];
+    protected $fillable = ['nom', 'quantite', 'recette_id', 'umesure_id'];
 
-    protected function nom(): Attribute
+    public function recette(): BelongsTo
     {
-        return Attribute::make(
-            get: fn($value) => json_decode($value, true),
-            set: fn($value) => json_encode($value)
-        );
+        return $this->belongsTo(Recette::class);
     }
 
-    static public function ingredients(){
-        $resource = IngredientResource::collection(self::select()->orderBy('nom')->get());
-        $data = json_encode($resource);
-        return json_decode($data, true);
-    }
+
 }

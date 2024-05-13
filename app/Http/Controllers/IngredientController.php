@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\etapes;
 use App\Models\Ingredient;
+use App\Models\Recette;
+use App\Models\Umesure;
 use Illuminate\Http\Request;
 
 class IngredientController extends Controller
@@ -29,20 +32,31 @@ class IngredientController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'ingredient_en' => 'required|max:30',
-            'ingredient_fr' => 'required|max:30',
-        ]);
-        $ingredient = [
-            'en' => $request->ingredient_en,
-/*             'fr' => $request->ingredient_fr, */
+        // dd($request);
+        $this->ingredient = [
+            'nom' => $request->nom,
+            'quantite' => $request->quantite,
+            'umesure_id' => $request->umesure_id,
+            'user_id' => 1,
+            'recette_id' => $request->recette_id
         ];
-        if($request->ingredient_fr != null) { $ingredient = $ingredient + ['fr' => $request->ingredient_fr];};
-        // dd($ingredient);
-        Ingredient::create([
-            'nom' => $ingredient
-        ]);
-        return back()->withSuccess('Ingredient created successfully!');
+
+        Ingredient::create($this->ingredient);
+
+        $this->recette = Recette::find($request->recette_id);
+        $this->uMesures = Umesure::all();
+
+        $this->ingredients = $this->recette->ingredients();
+        dd($this->ingredients);
+        
+        foreach ($this->ingredients as $ingredient) {
+            # code...
+        }
+        // dd($this->recette);
+
+        // $this->ingredients = Ingredient::find(1);
+        // return back()->withSuccess('Category created successfully!');
+        return view('recette.add-ingredient', $this->data);
     }
     
 
