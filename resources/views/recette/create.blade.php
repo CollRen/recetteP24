@@ -3,7 +3,7 @@
 @section('content')
 
 {{-- @dd($categories[0]['category'][$locale]) --}}
-<x-progress-bar :type="'address'">ceci</x-progress-bar>
+<x-progress-bar :type="'address'">Progression de la création de votre recette</x-progress-bar>
     @if(!$errors->isEmpty())
  <div class="relative px-3 py-3 mb-4 border rounded bg-red-200 border-red-300 text-red-800  opacity-0 opacity-100 block" role="alert">
         <ul>

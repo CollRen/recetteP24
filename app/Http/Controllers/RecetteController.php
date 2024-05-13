@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateRecettesRequest;
 use App\Models\Recette;
 use App\Models\Ingredient;
 use App\Models\Category;
+use App\Models\Umesure;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -40,18 +41,27 @@ class RecetteController extends Controller
      */
     public function store(StoreRecettesRequest $request)
     {
-      
-        $category = $request->category;
-        $recette = new Recette();
-        $recette->titre = $request->titre;
-        $recette->description = $request->description;
-        $recette->category_id = $request->category_id;
-        $recette->temps_cuisson = $request->temps_cuisson;
-        $recette->temps_preparation = $request->temps_preparation;
-        $recette->user_id = 1;
-        $recette->save();
+        $this->titre = $request->titre;
+        $this->description = $request->description;
+        $this->category_id = $request->category_id;
+        $this->temps_cuisson = $request->temps_cuisson;
+        $this->temps_preparation = $request->temps_preparation;
+        $this->user_id = 1;
+        
+        $this->recette = [
+            'titre' => $request->titre,
+            'description' => $request->description,
+            'category_id' => $request->category_id,
+            'temps_cuisson' => $request->temps_cuisson,
+            'temps_preparation' => $request->temps_preparation,
+            'user_id' => 1
+        ];
 
-        return view('recette.show', compact('recette'));
+        Recette::create($this->recette);
+
+        $this->uMesure = Umesure::all();
+
+        return view('recette.add-ingredient', $this->data );
 
     }
 

@@ -1,6 +1,6 @@
 <div>
     <div>
-  <h2 class="sr-only">Steps</h2>
+  <h2 class="m-5">{{$slot}}</h2>
 
   <div class="after:mt-4 after:block after:h-1 after:w-full after:rounded-lg after:bg-gray-200">
     <ol class="grid grid-cols-3 text-sm font-medium text-gray-500">
