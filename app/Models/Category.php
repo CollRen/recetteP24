@@ -18,9 +18,9 @@ class Category extends Model
         return $this->hasMany(Task::class);
     }
 
-    public function recette(): HasOne
+    public function recette(): belongsToMany
     {
-        return $this->hasOne(recette::class);
+        return $this->belongsToMany(Recette::class);
     }
 
     protected function category(): Attribute

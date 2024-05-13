@@ -10,7 +10,6 @@
       <div class="hidden items-center lg:flex lg:gap-x-12">
 
           <x-menu-item>@lang('Home')</x-menu-item>
-          <x-menu-item :link="'forfait'">@lang('Pricing')</x-menu-item>
           <x-menu-item :link="'contact'">Contact</x-menu-item>
           <x-menu-item :link="'about'">@lang('About')</x-menu-item>
 

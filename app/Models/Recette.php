@@ -22,12 +22,17 @@ class Recette extends Model
 
     public function ingredient(): HasMany
     {
-        return $this->hasMany(Ingredient::class)->withDefault(["titre'=> 'Pas d'"]);
+        return $this->hasMany(Ingredient::class)->withDefault(["titre'=> 'Pas d'ingrédient"]);
     }
 
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function etapes(): HasMany
+    {
+        return $this->hasMany(etapes::class);
     }
 
     public function user()

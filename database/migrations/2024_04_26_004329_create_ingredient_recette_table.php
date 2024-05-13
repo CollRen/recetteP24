@@ -17,6 +17,14 @@ return new class extends Migration
             $table->unsignedBigInteger('ingredient_id');
             $table->unsignedBigInteger('unite_mesure_id');
             $table->timestamps();
+
+
+            $table->foreign('unite_mesure_id')->references('id')
+                ->on('unite_mesures')->onDelete('cascade');
+            $table->foreign('ingredient_id')->references('id')
+                ->on('ingredients')->onDelete('cascade');
+            $table->foreign('recette_id')->references('id')
+                ->on('recettes')->onDelete('cascade');
         });
     }
 

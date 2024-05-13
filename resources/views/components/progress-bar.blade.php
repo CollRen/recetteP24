@@ -37,16 +37,16 @@
           />
         </svg>
       </li>
-    {{-- Condition pour le mot address --}}
+    {{-- Condition pour le mot ingredient --}}
       <li @class([
         'relative flex justify-center',
         'text-gray-600' =>$type =='detail',
-        'text-blue-600' =>$type =='address',
+        'text-blue-600' =>$type =='ingredient',
         ])>
         <span @class([
             "absolute -bottom-[1.75rem] left-1/2 -translate-x-1/2 rounded-full text-white",
             'bg-gray-600' =>$type =='detail',
-            'bg-blue-600' =>$type =='address',
+            'bg-blue-600' =>$type =='ingredient',
 
             ])
         >
@@ -64,7 +64,7 @@
           </svg>
         </span>
 
-        <span class="hidden sm:block"> Address </span>
+        <span class="hidden sm:block"> Ingredients </span>
 
         <svg
           class="mx-auto size-6 sm:hidden"
@@ -86,15 +86,15 @@
           />
         </svg>
       </li>
-    {{-- Conditions pour le mot Payment --}}
+    {{-- Conditions pour le mot etapes --}}
             <li  @class([
         "relative flex justify-center text-gray-600",
-        'text-blue-600' =>$type=='payment',
+        'text-blue-600' =>$type=='etapes',
         ])>
         <span
           @class([
             "absolute -bottom-[1.75rem] left-1/2 -translate-x-1/2 rounded-full bg-gray-600 text-white",
-            'bg-blue-600' =>$type=='payment',
+            'bg-blue-600' =>$type=='etapes',
 
             ])
         >
@@ -112,7 +112,7 @@
           </svg>
         </span>
 
-        <span class="hidden sm:block"> Payment </span>
+        <span class="hidden sm:block"> Étapes </span>
 
         <svg
           class="size-6 sm:hidden"

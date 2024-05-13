@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Ordres>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\etapes>
  */
-class OrdreFactory extends Factory
+class EtapesFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -16,9 +16,8 @@ class OrdreFactory extends Factory
      */
     public function definition(): array
     {
-        $n = 1;
-        return ['index' => $n+1  
+        return [
+            //
         ];
-        $n++;
     }
 }

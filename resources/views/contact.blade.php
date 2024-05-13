@@ -6,7 +6,6 @@
 
 <body>
 <div class="mt-24">
-<x-progress-bar :type="'address'">ceci</x-progress-bar>
 
 <section class="bg-clr-sec2 bg-opacity-5" id="contact">
     <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
