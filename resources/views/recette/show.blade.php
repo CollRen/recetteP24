@@ -11,9 +11,7 @@
             <p>La vidéo complète de la préparation de la recette</p>
         </div> --}}
         <div class="mt-8 flex justify-center gap-x-6">
-            <button class="rounded-md bg-clr-pri2 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-clr-sec2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clr-pri2">Sauvegarder</button>
             <button class="rounded-md bg-clr-pri2 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-clr-sec2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clr-pri2">Imprimer</button>
-            <button class="rounded-md bg-clr-pri2 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-clr-sec2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clr-pri2">Partager</button>
         </div>
         <div class="mt-8">
             <h2 class="text-xl font-semibold">{{ $recette['titre'] }}</h2>
@@ -23,23 +21,32 @@
                 <li>Par {{ $auteur }}</li>
             </ul>
         </div>
-        <div class="mt-8">
-            <h2 class="text-xl font-semibold">Description</h2>
-                <p>{{ $recette['description'] }}</p>
-            <ul class="mt-4">
-                <li>Ingrédient 1: X unités</li>
-                <li>Ingrédient 2: Y unités</li>
-            </ul>
-        </div>
-
-        <div class="mt-8">
-            <h2 class="text-xl font-semibold">Étapes de préparation :</h2>
-            <ol class="list-decimal pl-6 mt-4">
-                <li>Étape 1</li>
-                <li>Étape 2</li>
-                <li>Étape 3</li>
-            </ol>
-        </div>
+        <div class="mt-8 flex mr-11">
+         @if ($recette->image)
+                        <img class="h-80 w-72 object-cover rounded-t-xl" src="/storage/{{ $recette['image'] }}"
+                            alt="Image pour {{ $recette['titre'] }}" />
+                    @else
+                        <img class="h-80 w-72 object-cover rounded-t-xl" src="/assets/img/banniere.jpeg"
+                            alt="Image pour {{ $recette['titre'] }}" />
+                    @endif
+            <div class="ml-10 center">
+                <h2 class="text-xl font-semibold">Description</h2>
+                    <p>{{ $recette['description'] }}</p>
+                <ul class="mt-4">
+                    <li>Ingrédient 1: X unités</li>
+                    <li>Ingrédient 2: Y unités [...] à suivre</li>
+                </ul>
+                
+                        <div class="mt-8">
+                <h2 class="text-xl font-semibold">Étapes de préparation :</h2>
+                <ol class="list-decimal pl-6 mt-4">
+                    <li>Étape 1</li>
+                    <li>Étape 2</li>
+                    <li>Étape 3 [...] à suivre</li>
+                </ol>
+                        </div>
+                        </div>
+            </div>
         <div class="mt-8 flex justify-center gap-x-6">
             <a href=" @php echo $recette->id . '/edit' @endphp"><button class="rounded-md bg-clr-pri2 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-clr-sec2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clr-pri2">Modifier la recette</button></a>
             <a href=""><button class="rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Supprimer la recette</button></a>
