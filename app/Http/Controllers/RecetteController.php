@@ -24,7 +24,8 @@ class RecetteController extends Controller
      */
     public function index()
     {
-        //
+        $this->recettes = Recette::all();
+        return view('recette.index', $this->data);
     }
 
     /**
@@ -41,7 +42,11 @@ class RecetteController extends Controller
      */
     public function store(StoreRecettesRequest $request)
     {
-        $this->recette = [
+        if ($request->image) {
+            $path = $request->image->store("images", "public");
+            $this->recette = ['image' => $path];
+        }
+        $this->recette += [
             'titre' => $request->titre,
             'description' => $request->description,
             'category_id' => $request->category_id,

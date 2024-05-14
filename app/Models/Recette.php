@@ -17,7 +17,8 @@ class Recette extends Model
         'temps_preparation',
         'temps_cuisson',
         'user_id',
-        'category_id'
+        'category_id',
+        'image'
     ];
 
     public function ingredients(): HasMany
@@ -38,5 +39,10 @@ class Recette extends Model
     public function user()
     {
         return $this->belongsTo(User::class)->withDefault(['titre' => 'Pas de recette']);
+    }
+
+    public function imageFullPath()
+    {
+        return "/storage/$this->image";
     }
 }

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->text('description');
             $table->double('temps_preparation');
             $table->double('temps_cuisson');
+            $table->string('image')->nullable(true);
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('category_id');
             $table->timestamps();
