@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use App\Http\Resources\CategoryResource;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Category extends Model
@@ -18,9 +19,9 @@ class Category extends Model
         return $this->hasMany(Task::class);
     }
 
-    public function recette(): belongsToMany
+    public function recette(): hasMany
     {
-        return $this->belongsToMany(Recette::class);
+        return $this->hasMany(Recette::class);
     }
 
     protected function category(): Attribute
