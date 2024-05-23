@@ -22,7 +22,11 @@ class StoreRecettesRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'titre' => 'required|max:255|string',
+            'description' => 'required|max:255|string',
+            'category_id' => 'required|max:999|integer',
+            'temps_cuisson' => 'required|max:999|integer',
+            'temps_preparation' => 'required|max:999|integer'
         ];
     }
 }

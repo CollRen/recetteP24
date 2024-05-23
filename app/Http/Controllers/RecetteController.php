@@ -59,9 +59,8 @@ class RecetteController extends Controller
 
         $this->recette = Recette::create($this->recette);
 
+        // Récupérer les unités de mesures afin de la afficher dans le formulaire
         $this->uMesures = Umesure::all();
-
-
 
         return view('recette.add-ingredient', $this->data );
 
