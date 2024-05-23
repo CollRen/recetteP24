@@ -45,15 +45,14 @@
               <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
 
                   <li>
-                      <a href="/ingredient/create"
-                          class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">
+                      <a href="/ingredient/create" class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">
                           @lang('Ingredient')</a>
                   </li>
 
                   <li>
                       <a href="{{ route('category.create') }}"
                           class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">@lang('Category')
-                          </a>
+                      </a>
                   </li>
                   <li>
                       <a href="{{ route('user.create') }}"
@@ -62,7 +61,7 @@
 
                   <li>
                       <a href="/users"
-                          class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">@lang('List')</a>
+                          class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">@lang('Users')</a>
                   </li>
 
               </ul>
@@ -74,9 +73,15 @@
 
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="{{ route('login') }}"
-              class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('login') ? 'text-red-900 underline' : 'text-gray-900' }}">@lang('Login')
-              <span aria-hidden="true">&rarr;</span></a>
+          @guest
+              <a href="{{ route('login') }}"
+                  class="text-sm font-semibold leading-6  clr-sec2 {{ request()->is('login') ? 'text-red-900 underline' : 'text-gray-900' }}">@lang('Login')
+                  <span aria-hidden="true">&rarr;</span></a>
+          @else
+              <a href="{{ route('logout') }}"
+                  class="text-sm font-semibold leading-6 clr-sec2 text-gray-900">@lang('Logout')
+                  <span aria-hidden="true">&rarr;</span></a>
+          @endguest
       </div>
 
 

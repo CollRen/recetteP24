@@ -25,3 +25,7 @@
     - Voir /tests.md
   - Style
     - Changer le logo
+    - Enlever Login lorsque loggedIn 
+    - Mais... ajouter Logout pour destroy la session
+  - Routes
+    - users/{user} --> va null part

@@ -21,5 +21,11 @@
     "en":"en",
     "Ingredient": "Ingrédient",
     "Category": "Catégorie",
-    "List": "Liste"
+    "List": "Liste",
+    "Username": "Nom utilisateur",
+    "Password": "Mot de passe",
+    "Edit": "Changer",
+    "Registration": "Inscription",
+    "Name": "Nom",
+    "Save": "Sauvegarder"
 }

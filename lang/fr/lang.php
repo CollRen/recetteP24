@@ -11,4 +11,5 @@ return [
     'learn_more' => "Apprenez-en plus sur nous",
     'Pricing' => "Forfaits",
     'Choose your plan' => "Choisissez votre plan",
+    'Registration' => "Inscription",
 ];
