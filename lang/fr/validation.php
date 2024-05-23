@@ -48,7 +48,7 @@ return [
     'desttinct' => 'L\'attribut :attribute field has a duplicate value.',
     'doesnt_end_with' => 'L\'attribut :attribute field must not end with un of the following: :values.',
     'doesnt_start_with' => 'L\'attribut :attribute field must not start with un of the following: :values.',
-    'email' => 'L\'attribut :attribute doit être de a valid email address.',
+    'email' => 'L\'attribut :attribute doit être une adresse courriel valide.',
     'ends_with' => 'L\'attribut :attribute field must end with un of the following: :values.',
     'enum' => 'The selected :attribute est présent dansvalid.',
     'exestts' => 'The selected :attribute est présent dansvalid.',

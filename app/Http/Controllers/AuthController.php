@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\AuthRequest;
 
 class AuthController extends Controller
 {
@@ -28,18 +29,21 @@ class AuthController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(AuthRequest $request)
 {
-    $request->validate([
+    // dd($request);
+        $validated = $request->validated();
+    // $request->validated();
+/*     $request->validate([
         'email' => 'required|email|exists:users',
         'password' => 'required|min:6|max:20'
-    ]);
+    ]); */
     $credentials = $request->only('email', 'password');
-    if(!Auth::validate($credentials)):
+   /*  if(!Auth::validate($credentials)):
         return redirect(route('login'))
                     ->withErrors(trans('auth.failed'))
                     ->withInput();
-    endif;
+    endif; */
     $user = Auth::getProvider()->retrieveByCredentials($credentials);
     Auth::login($user);
     return redirect()->intended(route('recette.index'))->withSuccess('Signed in');

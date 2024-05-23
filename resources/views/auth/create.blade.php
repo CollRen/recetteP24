@@ -28,6 +28,7 @@
                             <label for="password" class="form-label">@lang('Password')</label>
                             <input type="password" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" id="password" name="password">
                         </div>
+                        
                         <button type="submit" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600">@lang('Login')</button>
                     </form>
                 </div>
