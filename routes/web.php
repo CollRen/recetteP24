@@ -79,7 +79,8 @@ Route::put('/password/reset/{user}/{token}', [UserController::class, 'resetUpdat
 
 
 
-Route::get('/task-pdf/{task}', [TaskController::class, 'pdf'])->name('task.pdf');
+// Route::get('/task-pdf/{task}', [TaskController::class, 'pdf'])->name('task.pdf');
+Route::get('/recette-pdf/{recette}', [RecetteController::class, 'pdf'])->name('recette.pdf');
 
 Route::get('/', function () {
     return view('welcome');

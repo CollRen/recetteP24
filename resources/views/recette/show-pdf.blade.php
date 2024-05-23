@@ -23,14 +23,14 @@
 </head>
 <body>
     <img src="data:image/png;base64,{{ base64_encode($qrCode) }}" alt="QR Code">  
-    <h1>{{ $task->title }}</h1>
-    <p>{{ $task->description }}</p>
+    <h1>{{ $recette->title }}</h1>
+    <p>{{ $recette->description }}</p>
     <hr>
     <ul>
-        <li><strong>Completed:</strong> {{ $task->completed ? 'Yes' : 'No' }}</li>
-        <li><strong>Due Date:</strong> {{ $task->due_date }}</li>
-        <li><strong>Author:</strong> {{ $task->user->name}}</li>
-        <li><strong>Category:</strong> {{ $task->category->category[app()->getLocale()] ?? $task->category->category['en'] }}</li>
+        <li><strong>Completed:</strong> {{ $recette->completed ? 'Yes' : 'No' }}</li>
+        <li><strong>Due Date:</strong> {{ $recette->due_date }}</li>
+        <li><strong>Author:</strong> {{ $recette->user->name}}</li>
+        <li><strong>Category:</strong> {{ $recette->category->category[app()->getLocale()] ?? $recette->category->category['en'] }}</li>
     </ul>
     <hr>
 </body>
