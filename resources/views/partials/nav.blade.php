@@ -35,7 +35,7 @@
           <!-- Dropdown menu Language-->
           <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
               class="btn btn-primary text-gray-900 hover:bg-clr-pale1 focus:ring-3 focus:outline-none focus:ring-clr-sec2 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-clr-sec2 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              type="button">Tasks<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              type="button">Admin<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                   fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="m1 1 4 4 4-4" />
@@ -46,14 +46,14 @@
 
                   <li>
                       <a href="/ingredient/create"
-                          class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">Ingredient
-                          @lang('Create')</a>
+                          class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">
+                          @lang('Ingredient')</a>
                   </li>
 
                   <li>
-                      <a href="{{ route('ingredient.create') }}"
-                          class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">Ingredient
-                          @lang('Create')</a>
+                      <a href="{{ route('category.create') }}"
+                          class="block px-4 py-2 hover:bg-clr-pale1 dark:hover:text-gray-900">@lang('Category')
+                          </a>
                   </li>
                   <li>
                       <a href="{{ route('user.create') }}"

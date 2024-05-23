@@ -12,6 +12,7 @@ return [
     'titre_About' => "About",
     'learn_more' => "Learn more about us",
     'Pricing' => "Pricing",
+    'Ingredient' => "Ingredient",
     'Choose your plan' => "Choose your plan",
 
 ];

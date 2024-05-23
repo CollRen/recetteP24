@@ -24,7 +24,7 @@
                     <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                         @auth
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{ route('task.index') }}">@lang('Tasks')</a>
+                            <a class="nav-link active" aria-current="page" href="{{ route('recette.index') }}">@lang('Recette')</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"

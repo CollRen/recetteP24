@@ -10,6 +10,8 @@ use App\Models\Category;
 use App\Models\Umesure;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Dompdf\Dompdf;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class RecetteController extends Controller
 {
@@ -149,5 +151,15 @@ class RecetteController extends Controller
         // dd($recette);
         $recette->delete();
         return redirect()->route("recette.index")->with("success", "La recette a été supprimés");
+    }
+
+    public function pdf(Recette $recette)
+    {
+        $qrCode = QrCode::size(200)->generate(route('recette.show', $recette->id));
+        $pdf = new Dompdf();
+        $pdf->setPaper('letter', 'portrait');
+        $pdf->loadHtml(view('recette.show-pdf', ["recette" => $recette, "qrCode" => $qrCode]));
+        $pdf->render();
+        return $pdf->stream('recette.pdf');
     }
 }

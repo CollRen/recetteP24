@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
-use App\Http\Controllers\TaskController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SetLocaleController;
@@ -23,18 +22,10 @@ use App\Http\Controllers\RecetteController;
 
 Route::get('/lang/{locale}', [SetLocaleController::class, 'index'])->name('lang');
 
-Route::get('/task/create', [TaskController::class, 'create'])->name('task.create');
-Route::post('/task/create', [TaskController::class, 'store'])->name('task.store');
-Route::get('/tasks', [TaskController::class, 'index'])->name('task.index');
-Route::get('/task/{task}', [TaskController::class, 'show'])->name('task.show');
-Route::get('/task/edit/{task}', [TaskController::class, 'edit'])->name('task.edit');
-Route::put('/task/edit/{task}', [TaskController::class, 'update'])->name('task.update');
-Route::delete('/task/{task}', [TaskController::class, 'destroy'])->name('task.delete');
-Route::get('/task/completed/{completed}', [TaskController::class, 'completed'])->name('task.completed');
-
 // Pour valider l'identité de l'utilisateur pour cette route
-// the /tasks route is protected by the auth middleware, which ensures that only authenticated users can access the route.
 
+// *** Protection d'une route ***
+// the /tasks route is protected by the auth middleware, which ensures that only authenticated users can access the route.
 /* Route::get('/tasks', [TaskController::class, 'index'])->name('task.index')->middleware('auth'); */
 
 
