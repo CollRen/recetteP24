@@ -35,7 +35,7 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="titre" class="form-label">Titre</label>
+                            <label for="titre" class="form-label">@lang('Title')</label>
                             <input type="text"
                                 class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"
                                 id="titre" name="titre" value="{{ old('titre') }}">
@@ -49,14 +49,14 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="temps_preparation" class="form-label">Temps de préparaion</label>
+                            <label for="temps_preparation" class="form-label">@lang('Preparation time')</label>
                             <input type="number"
                                 class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"
                                 id="temps_preparation" name="temps_preparation" value="{{ old('temps_preparation') }}">
                         </div>
 
                         <div class="mb-3">
-                            <label for="temps_cuisson" class="form-label">Temps de cuisson</label>
+                            <label for="temps_cuisson" class="form-label">@lang('Cook time')</label>
                             <input type="number"
                                 class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"
                                 id="temps_cuisson" name="temps_cuisson" value="{{ old('temps_cuisson') }}">
@@ -64,9 +64,9 @@
 
 
 
-                        <label for="category_id">Recette category</label>
+                        <label for="category_id">@lang('Category')</label>
                         <select name="category_id" id="category_id">
-                            <option value="">Select a Recette category</option>
+                            <option value="">@lang('Select a Recette category')</option>
 
                             @foreach ($categories as $category)
                                 <option value="{{ $category['id'] }}" @selected($category['id'] == old('category_id'))>
@@ -85,7 +85,7 @@
                 </div>
 
                 <button type="submit"
-                    class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600">Save</button>
+                    class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600">@lang('Save')</button>
                 </form>
             </div>
         </div>
