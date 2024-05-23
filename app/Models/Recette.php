@@ -6,10 +6,15 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Recette extends Model
 {
     use HasFactory;
+    // use SoftDeletes;
+    // $produit->delete();
+    // $produit->restore();
+    // $produit->forceDelete(); Supprime définitivement
 
     protected $fillable = [
         'titre',

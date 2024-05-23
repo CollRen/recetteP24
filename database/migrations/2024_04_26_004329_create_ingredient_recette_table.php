@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('ingredient_recette', function (Blueprint $table) {
             $table->double('quantite');
             $table->unsignedBigInteger('recette_id');
-            $table->unsignedBigInteger('ingredient_id');
-            $table->unsignedBigInteger('unite_mesure_id');
+            $table->unsignedBigInteger('ingredient_id')->nullable();
+            $table->unsignedBigInteger('unite_mesure_id')->nullable();
             $table->timestamps();
 
 

@@ -144,8 +144,10 @@ class RecetteController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Recette $recettes)
+    public function destroy(Recette $recette)
     {
-        //
+        // dd($recette);
+        $recette->delete();
+        return redirect()->route("recette.index")->with("success", "La recette a été supprimés");
     }
 }
