@@ -12,4 +12,6 @@ return [
     'Pricing' => "Forfaits",
     'Choose your plan' => "Choisissez votre plan",
     'Registration' => "Inscription",
+    'See the future inside nutrition ' => "Prédire l'avenir grâce à la nutrition ",
+
 ];

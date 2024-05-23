@@ -29,3 +29,6 @@
     - Mais... ajouter Logout pour destroy la session
   - Routes
     - users/{user} --> va null part
+  -  Traductions 
+     -  recherche ça:
+        -  @section('title',
