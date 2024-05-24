@@ -19,6 +19,16 @@ class RecetteFactory extends Factory
     public function definition(): array
     {
         return [
+            'image' => $this->faker->randomElement([
+                'images/image1.jpg',
+                'images/image2.jpg',
+                'images/image3.jpg',
+                'images/image4.jpg',
+                'images/image5.jpg',
+                'images/image6.jpg',
+                'images/image7.jpg',
+
+            ]),
             'titre' => $this->faker->words(3, true),
             'description' => $this->faker->paragraph(),
             'temps_preparation' => $this->faker->randomElement([5, 10, 15, 20, 25, 30, 40, 45, 50]),
