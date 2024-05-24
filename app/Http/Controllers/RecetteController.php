@@ -24,9 +24,25 @@ class RecetteController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $this->recettes = Recette::all();
+        //On récupère le queryString de la requête donc de l'url Ex: www.patate.com?tri=nom&direction=asc
+        $tri = $request->query('tri', 'nom');
+        $direction = $request->query('direction', 'asc');
+        $category = $request->query("category");
+
+        $recetteQuery = Recette::query();
+        if ($category)
+        {
+            $recetteQuery->where('category_id', $category);
+        }
+
+        $recetteQuery->orderBy($direction);
+
+        $this->recettes = $recetteQuery->paginate(4);
+
+
+
         return view('recette.index', $this->data);
     }
 
@@ -44,6 +60,8 @@ class RecetteController extends Controller
      */
     public function store(StoreRecettesRequest $request)
     {
+        // Initialiser le tableau au cas où il n'y aurait pas d'image
+        $this->recette = [];
         if ($request->image) {
             $path = $request->image->store("images", "public");
             $this->recette = ['image' => $path];
@@ -56,7 +74,6 @@ class RecetteController extends Controller
             'temps_preparation' => $request->temps_preparation,
             'user_id' => 1
         ];
-
         $this->recette = Recette::create($this->recette);
 
         // Récupérer les unités de mesures afin de la afficher dans le formulaire
