@@ -39,7 +39,7 @@ class RecetteController extends Controller
 
         $recetteQuery->orderBy($direction);
 
-        $this->recettes = $recetteQuery->paginate(4);
+        $this->recettes = $recetteQuery->paginate(4)->withQueryString();
 
 
 
