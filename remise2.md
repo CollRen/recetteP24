@@ -20,4 +20,3 @@
 
   - Route: users/{user} --> 
   -  Traductions recherche ça: @section('title',
-  -  Enlever le BadgeAttention dans /contact
