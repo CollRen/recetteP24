@@ -7,11 +7,11 @@
     - @tailwindcss/forms
 -->
 
-    <div class="mt-8 block lg:hidden">
+    <div class="mt-8 lg:hidden">
       <button
         class="flex cursor-pointer items-center gap-2 border-b border-gray-400 pb-1 text-gray-900 transition hover:border-gray-600"
       >
-        <span class="text-sm font-medium"> Filters & Sorting </span>
+        <span class="text-sm font-medium"> Filters & Sortingdddddddd </span>
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -26,22 +26,22 @@
       </button>
     </div>
 
-    <div class="mt-4 lg:mt-8 lg:grid lg:grid-cols-4 lg:items-start lg:gap-8">
+    <div class="mt-4 lg:mt-8 lg:grid lg:grid-cols-1 lg:items-start lg:gap-8">
       <div class="hidden space-y-4 lg:block">
         <div>
-          <label for="SortBy" class="block text-xs font-medium text-gray-700"> Sort By </label>
+          <label for="SortBy" class="block text-xs font-medium text-gray-700"> @lang('Sort By') </label>
 
           <select id="SortBy" class="mt-1 rounded border-gray-300 text-sm">
-            <option>Sort By</option>
-            <option value="Title, DESC">Title, DESC</option>
-            <option value="Title, ASC">Title, ASC</option>
-            <option value="Price, DESC">Price, DESC</option>
-            <option value="Price, ASC">Price, ASC</option>
+            <option>@lang('Sort By')</option>
+            <option value="titre, DESC">@lang('Title'), DESC</option>
+            <option value="titre, ASC">@lang('Title'), ASC</option>
+            <option value="temps_preparation, DESC">@lang('Time'), DESC</option>
+            <option value="temps_preparation, ASC">@lang('Time'), ASC</option>
           </select>
         </div>
 
         <div>
-          <p class="block text-xs font-medium text-gray-700">Filters</p>
+          <p class="block text-xs font-medium text-gray-700">@lang('Filters')</p>
 
           <div class="mt-1 space-y-2">
             <details
@@ -50,7 +50,7 @@
               <summary
                 class="flex cursor-pointer items-center justify-between gap-2 p-4 text-gray-900 transition"
               >
-                <span class="text-sm font-medium"> Availability </span>
+                <span class="text-sm font-medium"> @lang('Ingredients') </span>
 
                 <span class="transition group-open:-rotate-180">
                   <svg
@@ -88,7 +88,7 @@
                         class="size-5 rounded border-gray-300"
                       />
 
-                      <span class="text-sm font-medium text-gray-700"> In Stock (5+) </span>
+                      <span class="text-sm font-medium text-gray-700"> @lang('More than') (3+) </span>
                     </label>
                   </li>
 
@@ -100,7 +100,7 @@
                         class="size-5 rounded border-gray-300"
                       />
 
-                      <span class="text-sm font-medium text-gray-700"> Pre Order (3+) </span>
+                      <span class="text-sm font-medium text-gray-700"> @lang('More than')(6+) </span>
                     </label>
                   </li>
 
@@ -112,7 +112,7 @@
                         class="size-5 rounded border-gray-300"
                       />
 
-                      <span class="text-sm font-medium text-gray-700"> Out of Stock (10+) </span>
+                      <span class="text-sm font-medium text-gray-700"> @lang('More than')(10+) </span>
                     </label>
                   </li>
                 </ul>
@@ -125,7 +125,7 @@
               <summary
                 class="flex cursor-pointer items-center justify-between gap-2 p-4 text-gray-900 transition"
               >
-                <span class="text-sm font-medium"> Price </span>
+                <span class="text-sm font-medium"> @lang('Temps') </span>
 
                 <span class="transition group-open:-rotate-180">
                   <svg
@@ -147,7 +147,7 @@
 
               <div class="border-t border-gray-200 bg-white">
                 <header class="flex items-center justify-between p-4">
-                  <span class="text-sm text-gray-700"> The highest price is $600 </span>
+                  <span class="text-sm text-gray-700"> @lang('Preparation Time') </span>
 
                   <button type="button" class="text-sm text-gray-900 underline underline-offset-4">
                     Reset
@@ -156,23 +156,23 @@
 
                 <div class="border-t border-gray-200 p-4">
                   <div class="flex justify-between gap-4">
-                    <label for="FilterPriceFrom" class="flex items-center gap-2">
+                    <label for="FilterTempsFrom" class="flex items-center gap-2">
                       <span class="text-sm text-gray-600">$</span>
 
                       <input
                         type="number"
-                        id="FilterPriceFrom"
+                        id="FilterTempsFrom"
                         placeholder="From"
                         class="w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
                       />
                     </label>
 
-                    <label for="FilterPriceTo" class="flex items-center gap-2">
+                    <label for="FilterTempsTo" class="flex items-center gap-2">
                       <span class="text-sm text-gray-600">$</span>
 
                       <input
                         type="number"
-                        id="FilterPriceTo"
+                        id="FilterTempsTo"
                         placeholder="To"
                         class="w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
                       />
@@ -188,7 +188,7 @@
               <summary
                 class="flex cursor-pointer items-center justify-between gap-2 p-4 text-gray-900 transition"
               >
-                <span class="text-sm font-medium"> Colors </span>
+                <span class="text-sm font-medium"> @lang('Category') </span>
 
                 <span class="transition group-open:-rotate-180">
                   <svg
@@ -294,4 +294,5 @@
             </details>
           </div>
         </div>
+        
       </div>

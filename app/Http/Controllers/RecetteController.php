@@ -12,6 +12,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Dompdf\Dompdf;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use Illuminate\Pagination\Paginator;
 
 class RecetteController extends Controller
 {
@@ -26,6 +27,8 @@ class RecetteController extends Controller
      */
     public function index(Request $request)
     {
+        Paginator::useTailwind();
+
         //On récupère le queryString de la requête donc de l'url Ex: www.patate.com?tri=nom&direction=asc
         $tri = $request->query('tri', 'nom');
         $direction = $request->query('direction', 'asc');
@@ -39,7 +42,7 @@ class RecetteController extends Controller
 
         $recetteQuery->orderBy($direction);
 
-        $this->recettes = $recetteQuery->paginate(4)->withQueryString();
+        $this->recettes = $recetteQuery->simplePaginate(8)->withQueryString();
 
 
 
