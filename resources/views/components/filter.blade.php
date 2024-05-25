@@ -31,15 +31,15 @@
         <div>
           <label for="SortBy" class="block text-xs font-medium text-gray-700"> @lang('Sort By') </label>
 
-          <select id="SortBy" class="mt-1 rounded border-gray-300 text-sm">
+          <select id="SortBy" class="mt-1 rounded border-gray-300 text-sm" onchange="location = this.value;">
             <option>@lang('Sort By')</option>
-            <option value="titre, DESC">@lang('Title'), DESC</option>
-            <option value="titre, ASC">@lang('Title'), ASC</option>
-            <option value="temps_preparation, DESC">@lang('Time'), DESC</option>
-            <option value="temps_preparation, ASC">@lang('Time'), ASC</option>
+            <option value="{{ route('recette.index', ['tri' => 'titre', 'direction' => 'desc']) }}">@lang('Title'), DESC</option>
+            <option value="{{ route('recette.index', ['tri' => 'titre', 'direction' => 'asc']) }}">@lang('Title'), ASC</option>
+            <option value="{{ route('recette.index', ['tri' => 'temps_preparation', 'direction' => 'desc']) }}">@lang('Time'), DESC</option>
+            <option value="{{ route('recette.index', ['tri' => 'temps_preparation', 'direction' => 'asc']) }}">@lang('Time'), ASC</option>
           </select>
         </div>
-
+  <a href="{{ route('recette.index', ['tri' => 'titre', 'direction' => 'desc']) }}">test</a>
         <div>
           <p class="block text-xs font-medium text-gray-700">@lang('Filters')</p>
 

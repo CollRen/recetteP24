@@ -27,21 +27,23 @@ class RecetteController extends Controller
      */
     public function index(Request $request)
     {
-        Paginator::useTailwind();
-
+        
         //On récupère le queryString de la requête donc de l'url Ex: www.patate.com?tri=nom&direction=asc
         $tri = $request->query('tri', 'nom');
         $direction = $request->query('direction', 'asc');
         $category = $request->query("category");
-
+        
         $recetteQuery = Recette::query();
         if ($category)
         {
             $recetteQuery->where('category_id', $category);
         }
 
-        $recetteQuery->orderBy($direction);
-
+        
+        $recetteQuery->orderBy($tri, $direction);
+       
+        
+        Paginator::useTailwind();
         $this->recettes = $recetteQuery->simplePaginate(8)->withQueryString();
 
 
