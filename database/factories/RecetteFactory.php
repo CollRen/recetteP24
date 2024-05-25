@@ -34,7 +34,7 @@ class RecetteFactory extends Factory
             'temps_preparation' => $this->faker->randomElement([5, 10, 15, 20, 25, 30, 40, 45, 50]),
             'temps_cuisson' => $this->faker->randomElement([5, 10, 15, 20, 25, 30, 40, 45, 50]),
             'user_id' => User::factory(),
-            'category_id' => Category::factory()
+            'category_id' => $this->faker->randomElement([1, 2, 3, 4, 5, 6, 7])
         ];
     }
 }
