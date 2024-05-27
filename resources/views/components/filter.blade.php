@@ -6,7 +6,7 @@
   Plugins:
     - @tailwindcss/forms
 -->
-
+{{-- @dd($categories) --}}
     <div class="mt-8 lg:hidden">
       <button
         class="flex cursor-pointer items-center gap-2 border-b border-gray-400 pb-1 text-gray-900 transition hover:border-gray-600"

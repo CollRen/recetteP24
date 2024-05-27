@@ -46,7 +46,8 @@ class RecetteController extends Controller
         Paginator::useTailwind();
         $this->recettes = $recetteQuery->simplePaginate(8)->withQueryString();
 
-
+        //Retourner toutes les catégories pour la boucle du filtre Catégorie
+        $this->categories = Category::All();
 
         return view('recette.index', $this->data);
     }

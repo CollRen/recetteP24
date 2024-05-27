@@ -7,7 +7,7 @@
 
         <aside class="flex-0 px-4">
         {{ $recettes->links() }}
-            <x-filter></x-filter>
+            <x-filter :categories="$categories"></x-filter>
         </aside>
         {{-- @dd($recettes) --}}
         <main class="flex-1">
