@@ -218,54 +218,9 @@
                 </header>
 
                 <ul class="space-y-1 border-t border-gray-200 p-4">
-                  <li>
-                    <label for="FilterRed" class="inline-flex items-center gap-2">
-                      <input
-                        type="checkbox"
-                        id="FilterRed"
-                        class="size-5 rounded border-gray-300"
-                      />
-
-                      <span class="text-sm font-medium text-gray-700"> Red </span>
-                    </label>
-                  </li>
-
-                  <li>
-                    <label for="FilterBlue" class="inline-flex items-center gap-2">
-                      <input
-                        type="checkbox"
-                        id="FilterBlue"
-                        class="size-5 rounded border-gray-300"
-                      />
-
-                      <span class="text-sm font-medium text-gray-700"> Blue </span>
-                    </label>
-                  </li>
-
-                  <li>
-                    <label for="FilterGreen" class="inline-flex items-center gap-2">
-                      <input
-                        type="checkbox"
-                        id="FilterGreen"
-                        class="size-5 rounded border-gray-300"
-                      />
-
-                      <span class="text-sm font-medium text-gray-700"> Green </span>
-                    </label>
-                  </li>
-
-                  <li>
-                    <label for="FilterOrange" class="inline-flex items-center gap-2">
-                      <input
-                        type="checkbox"
-                        id="FilterOrange"
-                        class="size-5 rounded border-gray-300"
-                      />
-
-                      <span class="text-sm font-medium text-gray-700"> Orange </span>
-                    </label>
-                  </li>
-
+                  
+                  @foreach ($categories as $category )
+                    
                   <li>
                     <label for="FilterPurple" class="inline-flex items-center gap-2">
                       <input
@@ -274,21 +229,12 @@
                         class="size-5 rounded border-gray-300"
                       />
 
-                      <span class="text-sm font-medium text-gray-700"> Purple </span>
+                      <span class="text-sm font-medium text-gray-700"> {{$category->category[$locale]}} </span>
                     </label>
                   </li>
+                  @endforeach
 
-                  <li>
-                    <label for="FilterTeal" class="inline-flex items-center gap-2">
-                      <input
-                        type="checkbox"
-                        id="FilterTeal"
-                        class="size-5 rounded border-gray-300"
-                      />
 
-                      <span class="text-sm font-medium text-gray-700"> Teal </span>
-                    </label>
-                  </li>
                 </ul>
               </div>
             </details>
