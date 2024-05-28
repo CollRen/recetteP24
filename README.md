@@ -1,20 +1,20 @@
 # Départ
 
-How to install?
-
-Clone this repository.
-In terminal : composer update
-In terminal : npm update
-Copy .env.example and rename to .env
-Set up the database name
-In terminal : php artisan key:generate
-In terminal : php artisan config:clear
-In terminal : php artisan config:cache
-In terminal : php artisan route:cache
-In terminal : php artisan migrate
-In terminal : php artisan storage:link
-In terminal : php artisan serve
-Done.
+ - How to install?
+ - 
+ - Clone this repository.
+ - In terminal : composer update
+ - In terminal : npm update
+ - Copy .env.example and rename to .env
+ - Set up the database name
+ - In terminal : php artisan key:generate
+ - In terminal : php artisan config:clear
+ - In terminal : php artisan config:cache
+ - In terminal : php artisan route:cache
+ - In terminal : php artisan migrate
+ - In terminal : php artisan storage:link
+ - In terminal : php artisan serve
+ - Done.
 
 ## Création de la base de données de développement
 
