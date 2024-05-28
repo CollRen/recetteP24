@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ingredients', function (Blueprint $table) {
+/*         Schema::create('ingredients', function (Blueprint $table) {
             $table->id();
             $table->text('nom');
             $table->double('quantite');
@@ -20,7 +20,7 @@ return new class extends Migration
             $table->timestamps();
             $table->foreign('umesure_id')->references('id')->on('umesures')->onDelete('cascade');
             $table->foreign('recette_id')->references('id')->on('recettes')->onDelete('cascade');
-        });
+        }); */
     }
 
     public function down(): void

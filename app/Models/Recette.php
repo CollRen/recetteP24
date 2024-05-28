@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Recette extends Model
 {
     use HasFactory;
-    // use SoftDeletes;
+    use SoftDeletes;
     // $produit->delete();
     // $produit->restore();
     // $produit->forceDelete(); Supprime définitivement
@@ -26,10 +26,10 @@ class Recette extends Model
         'image'
     ];
 
-    public function ingredients(): HasMany
+/*     public function ingredients(): HasMany
     {
         return $this->hasMany(Ingredient::class);
-    }
+    } */
 
     public function category()
     {

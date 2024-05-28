@@ -2,12 +2,12 @@
 @section('title', 'Index des recettes')
 
 @section('content')
-
+{{-- @dd($locale) --}}
     <div class="flex">
 
         <aside class="flex-0 px-4">
         {{ $recettes->links() }}
-            <x-filter :categories="$categories"></x-filter>
+            <x-filter :categories="$categories" :locale="$locale"></x-filter>
         </aside>
         {{-- @dd($recettes) --}}
         <main class="flex-1">

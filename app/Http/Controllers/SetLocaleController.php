@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+
 
 class SetLocaleController extends Controller
 {
@@ -11,8 +13,10 @@ class SetLocaleController extends Controller
             abort(400);
         }
         session()->put('locale', $locale);
-        // dd($locale);
-        // App::setLocale($locale);
+        App::setLocale($locale);
+        
+
+
 
         return back();
      }

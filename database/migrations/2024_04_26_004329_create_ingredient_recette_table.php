@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ingredient_recette', function (Blueprint $table) {
+/*         Schema::create('ingredient_recette', function (Blueprint $table) {
             $table->double('quantite');
             $table->unsignedBigInteger('recette_id');
             $table->unsignedBigInteger('ingredient_id')->nullable();
@@ -25,7 +25,7 @@ return new class extends Migration
                 ->on('ingredients')->onDelete('cascade');
             $table->foreign('recette_id')->references('id')
                 ->on('recettes')->onDelete('cascade');
-        });
+        }); */
     }
 
     /**

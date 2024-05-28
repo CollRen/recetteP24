@@ -43,7 +43,7 @@ class RecetteController extends Controller
         $recetteQuery->orderBy($tri, $direction);
        
         
-        Paginator::useTailwind();
+
         $this->recettes = $recetteQuery->simplePaginate(8)->withQueryString();
 
         //Retourner toutes les catégories pour la boucle du filtre Catégorie

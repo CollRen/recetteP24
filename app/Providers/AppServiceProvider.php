@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
     {
 
 /*         $locale = session()->get('locale', 'fr');
-        // dd($locale);
+        dd($locale);
         app('translator')->setLocale($locale); */
     }
 
@@ -26,9 +26,11 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //Schema::defaultStringLength(191);
-        Paginator::useBootstrap();
+        Paginator::useTailwind();
         // Il faut trouver une façon d'envoyer la valeur local en ou fr ici
-        View::share('locale', 'en');
+        
+        $locale = session()->get('locale', 'en');
+        View::share('locale', $locale);
     }
 
     
