@@ -1,7 +1,6 @@
 # Départ
 
  - How to install?
- - 
  - Clone this repository.
  - In terminal : composer update
  - In terminal : npm update
