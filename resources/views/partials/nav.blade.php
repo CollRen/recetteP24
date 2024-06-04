@@ -13,6 +13,7 @@
           <x-menu-item :link="'contact'">Contact</x-menu-item>
           <x-menu-item :link="'about'">@lang('About')</x-menu-item>
           <x-menu-item :link="'recette'">@lang('Recettes')</x-menu-item>
+          <x-menu-item :link="'recette/create'">@lang('Créer une recette')</x-menu-item>
 
 
           {{--         <a href="#"
