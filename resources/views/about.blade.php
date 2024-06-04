@@ -13,7 +13,7 @@
                 <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">@lang('lang.titre_About')</h2>
                 <p class="mt-4 text-clr-pri1 text-lg">@lang('lang.text_about_us')</p>
                 <div class="mt-8">
-                    <a href="#" class="text-blue-500 hover:text-clr-sec2 font-medium">@lang('lang.learn_more')
+                    <a href="{{ route('recette.create') }}" class="text-blue-500 hover:text-clr-sec2 font-medium">@lang('lang.learn_more')
                         <span class="ml-2">&#8594;</span></a>
                 </div>
             </div>

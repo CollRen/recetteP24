@@ -10,7 +10,7 @@ return [
     'text_about_us' => "Passionate avout recepi, we give our best to render our alimentation so good that you can't belive you can taste. Go, don't be shy!",
     'About' => "About",
     'titre_About' => "About",
-    'learn_more' => "Learn more about us",
+    'learn_more' => "Go create a recipe!",
     'Pricing' => "Pricing",
     'Ingredient' => "Ingredient",
     'Choose your plan' => "Choose your plan",
