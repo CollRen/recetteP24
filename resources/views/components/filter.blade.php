@@ -11,7 +11,7 @@
       <button
         class="flex cursor-pointer items-center gap-2 border-b border-gray-400 pb-1 text-gray-900 transition hover:border-gray-600"
       >
-        <span class="text-sm font-medium"> Filters & Sortingdddddddd </span>
+        <span class="text-sm font-medium"> Filters & Sorting</span>
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@
             <option value="{{ route('recette.index', ['tri' => 'temps_preparation', 'direction' => 'asc']) }}">@lang('Time'), ASC</option>
           </select>
         </div>
-  <a href="{{ route('recette.index', ['tri' => 'titre', 'direction' => 'desc']) }}">test</a>
+ {{--  <a href="{{ route('recette.index', ['tri' => 'titre', 'direction' => 'desc']) }}">test</a>
         <div>
           <p class="block text-xs font-medium text-gray-700">@lang('Filters')</p>
 
@@ -239,6 +239,6 @@
               </div>
             </details>
           </div>
-        </div>
+        </div> --}}
         
       </div>

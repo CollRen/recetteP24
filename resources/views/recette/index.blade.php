@@ -6,8 +6,8 @@
     <div class="flex">
 
         <aside class="flex-0 px-4">
-        {{ $recettes->links() }}
             <x-filter :categories="$categories" :locale="$locale"></x-filter>
+        {{ $recettes->links() }}
         </aside>
         {{-- @dd($recettes) --}}
         <main class="flex-1">
