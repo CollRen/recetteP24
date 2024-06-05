@@ -28,24 +28,7 @@
                         Là où vous nous attendez le moins, nous ne nous y immiscerons pas... c'est la moindre des choses&nbsp;!
                     </p>
                     <ul class="mb-6 md:mb-0">
-                        <li class="flex">
-                            <div class="flex h-10 w-10 items-center justify-center rounded bg-clr-pri1 text-gray-50">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="h-6 w-6">
-                                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
-                                    <path
-                                        d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="ml-4 mb-4">
-                                <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Notre adresse
-                                </h3>
-                                <p class="text-clr-pri1 dark:text-slate-400">1230 Rue du Siècle</p>
-                                <p class="text-clr-pri1 dark:text-slate-400">Montréal, QC</p>
-                            </div>
-                        </li>
+
                         <li class="flex">
                             <div class="flex h-10 w-10 items-center justify-center rounded bg-clr-pri1 text-gray-50">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -59,12 +42,12 @@
                                 </svg>
                             </div>
                             <div class="ml-4 mb-4">
-                                <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Contact
-                                </h3>
-                                <p class="text-clr-pri1 dark:text-slate-400">Mobile: +1 (514) 456-7890<x-badge :type="'success'" :message="'Attention'">Badge</x-badge></p>
-                                <p class="text-clr-pri1 dark:text-slate-400">Mail: ttrraiv@gmail.com</p>
+
+                                <p class="text-clr-pri1 dark:text-slate-400">+1 (514) 456-7890{{-- <x-badge :type="'success'" :message="'Attention'">Badge</x-badge> --}}</p>
+                                <p class="text-clr-pri1 dark:text-slate-400">trraiv@gmail.com</p>
                             </div>
                         </li>
+                        
                         <li class="flex">
                             <div class="flex h-10 w-10 items-center justify-center rounded bg-clr-pri1 text-gray-50">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -75,12 +58,30 @@
                                 </svg>
                             </div>
                             <div class="ml-4 mb-4">
-                                <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Heures d'ouverture
-                                    hours</h3>
+
                                 <p class="text-clr-pri1 dark:text-slate-400">Lundi - Vendredi: 08:00 - 17:00</p>
                                 <p class="text-clr-pri1 dark:text-slate-400">Samedi &amp; Dimanche: 08:00 - 12:00</p>
                             </div>
                         </li>
+
+                                                <li class="flex">
+                            <div class="flex h-10 w-10 items-center justify-center rounded bg-clr-pri1 text-gray-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-6 w-6">
+                                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                                    <path
+                                        d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="ml-4 mb-4">
+
+                                <p class="text-clr-pri1 dark:text-slate-400">1230 Rue du Siècle</p>
+                                <p class="text-clr-pri1 dark:text-slate-400">Montréal, QC</p>
+                            </div>
+                        </li>
+
                     </ul>
                 </div>
                 <div class="card h-fit max-w-6xl p-5 md:p-12" id="form">
