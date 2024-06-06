@@ -16,10 +16,14 @@ use Illuminate\Pagination\Paginator;
 
 class RecetteController extends Controller
 {
-    public function __construct()
-    {
-        parent::__construct();
-    }
+    /**
+ * Create a new job instance.
+ */
+public function __construct(Recette $recette)
+{
+    parent::__construct();
+    // $this->recette = $recette->withoutRelations();
+}
 
 
     /**
@@ -83,7 +87,7 @@ class RecetteController extends Controller
         $this->recette = Recette::create($this->recette);
 
         // Récupérer les unités de mesures afin de la afficher dans le formulaire
-        $this->uMesures = Umesure::all();
+        // $this->uMesures = Umesure::all();
 
         return view('recette.add-ingredient', $this->data );
 

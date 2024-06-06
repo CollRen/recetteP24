@@ -20,6 +20,9 @@ Route::get('/publish', function () {
     ]));
 });
 
+Route::get('/', function (Service $service) {
+    die($service::class);
+});
 
 
 

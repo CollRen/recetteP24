@@ -9,6 +9,13 @@
 
 - Radis (queue) --> Horizon
 - Cluster c'est lorsque plusieurs serveurs travaillent ensemble
+- type-hint dependencies : 
+```php 
+$this->app->bindMethod([ProcessPodcast::class, 'handle'], function (ProcessPodcast $job, Application $app) {
+    return $job->handle($app->make(RecetteProcessor::class)); 
+    ```
+
+    shouldDiscoverEvents to true
 
 ##### Non mis en place
 
@@ -164,3 +171,15 @@ Once you have enabled Reverb's scaling option and configured a Redis server, you
 
 brew services start redis
 php artisan horizon
+
+
+
+### Changement de noms pour implémenter events
+
+SendShipmentNotification -> SendRecetteCreatedNotification
+OrderShipped -> RecetteCreated
+PodcastProcessed -> RecetteCreated
+SendPodcastNotification -> SendRecetteCreatedNotification
+
+
+

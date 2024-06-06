@@ -33,6 +33,18 @@ class EventServiceProvider extends ServiceProvider
      */
     public function shouldDiscoverEvents(): bool
     {
-        return false;
+        return true;
+    }
+
+    /**
+     * Get the listener directories that should be used to discover events.
+     *
+     * @return array<int, string>
+     */
+    protected function discoverEventsWithin(): array
+    {
+        return [
+            $this->app->path('Listeners'),
+        ];
     }
 }

@@ -37,7 +37,7 @@
                                 id="quantite" name="quantite" value="{{ old('quantite') }}">
                         </div>
 
-                        <label for="umesure_id">Recette category</label>
+                        {{--         <label for="umesure_id">Recette category</label>
                         <select name="umesure_id" id="umesure_id">
                             <option value="">Selectionnez une unité de mesure</option>
 
@@ -54,17 +54,17 @@
                             <div>
                                 {{ $errors->first('umesure_id') }}
                             </div>
-                        @endif
+                        @endif --}}
                 </div>
 
 
 
-                        <div class="mb-3">
-                            <label for="recette_id" class="form-label">Ingrédients</label>
-                            <input type="hidden"
-                                class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"
-                                id="recette_id" name="recette_id" value="{{ $recette['id'] }}">
-                        </div>
+                <div class="mb-3">
+                    <label for="recette_id" class="form-label">Ingrédients</label>
+                    <input type="hidden"
+                        class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"
+                        id="recette_id" name="recette_id" value="{{ $recette['id'] }}">
+                </div>
 
 
 
