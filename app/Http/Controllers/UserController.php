@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\UserRequest;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redis;
+use Illuminate\View\View;
 
 
 
@@ -19,6 +22,17 @@ class UserController extends Controller
     {
         parent::__construct();
     }
+
+    /**
+     * Show the profile for the given user.
+     */
+    public function show(string $id): View
+    {
+        return view('user.profile', [
+            'user' => Redis::get('user:profile:' . $id)
+        ]);
+    }
+
     /**
      * Display a listing of the resource.
      */
@@ -55,15 +69,6 @@ class UserController extends Controller
 
         return redirect(route('user.index'))->withSuccess('User created successfully!');
     }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(User $user)
-    {
-        //
-    }
-
     /**
      * Show the form for editing the specified resource.
      */

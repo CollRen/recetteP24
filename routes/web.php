@@ -9,16 +9,19 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\IngredientController;
 use App\Http\Controllers\UmesureController;
 use App\Http\Controllers\RecetteController;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+
+use Illuminate\Support\Facades\Redis;
+
+Route::get('/publish', function () {
+    // ...
+
+    Redis::publish('test-channel', json_encode([
+        'name' => 'Adam Wathan'
+    ]));
+});
+
+
+
 
 Route::get('/lang/{locale}', [SetLocaleController::class, 'index'])->name('lang');
 
