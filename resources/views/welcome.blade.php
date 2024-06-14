@@ -6,6 +6,12 @@
 
     <body>
 
+        <button id="submit-button" type="button">
+            Press Me!
+        </button>
+
+        @csrf
+
 
 
 

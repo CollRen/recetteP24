@@ -29,6 +29,7 @@ Route::get('/lang/{locale}', [SetLocaleController::class, 'index'])->name('lang'
 /* Route::get('/tasks', [TaskController::class, 'index'])->name('task.index')->middleware('auth'); */
 
 
+Route::get('/ecoute', [UserController::class, 'index'])->name('user.index');
 
 Route::get('/users', [UserController::class, 'index'])->name('user.index');
 Route::get('/users/index2', [UserController::class, 'index2'])->name('user.index2');

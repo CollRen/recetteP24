@@ -16,9 +16,13 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "-": "^0.0.1",
         "@material-tailwind/html": "^2.2.2",
         "@tailwindcss/container-queries": "^0.1.1",
         "flowbite": "^2.3.0",
+        "laravel-echo": "^1.16.1",
+        "pusher-js": "^8.4.0-rc2",
+        "save": "^2.9.0",
         "tailwind": "^4.0.0"
     }
 }
