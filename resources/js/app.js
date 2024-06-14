@@ -8,6 +8,40 @@ import.meta.glob(["../img/**", "../fonts/**"])
 
 // Ou importer chaque image individuellement
 
+
+// Récupérer le Token pour l'appel axios
+
+const leToken = document.getElementsByName('_token');
+console.log(leToken[0].value);
+
+// Create an event listener that will send a POST request to the
+// server when the user clicks the button.
+document.querySelector('#submit-button').addEventListener(
+    'click', /* function() {
+        let oOptions = {
+            method: 'POST'
+        }
+        fetch('btnClickedCont', oOptions)
+        .then(console.log('succes'))
+    } */
+    () => window.axios.post('/button/clicked', {"data": {
+        "token": leToken
+    }})
+            
+
+);
+
+
+// Subscribe to the public channel called "public-channel"
+window.Echo.channel('public-channel')
+
+    // Listen for the event called "button.clicked"
+    .listen('.button.clicked', (e) => {
+
+        // Display the "message" in an alert box
+        alert(e.message);
+    });
+
 import Echo from 'laravel-echo';
 import Pusher from 'pusher-js';
 
