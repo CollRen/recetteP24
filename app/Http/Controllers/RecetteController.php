@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\RecetteCreated;
 use App\Http\Requests\StoreRecettesRequest;
 use App\Http\Requests\UpdateRecettesRequest;
 use App\Models\Recette;
@@ -14,6 +15,7 @@ use Dompdf\Dompdf;
 use App\Events\NewMessage;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Illuminate\Pagination\Paginator;
+
 
 class RecetteController extends Controller
 {

@@ -1,6 +1,6 @@
 import './bootstrap';
 import '../../node_modules/flowbite/dist/flowbite.min.js';
-import './bootstrap';
+import './echo.js';
 
 // Compiler toutes les images, polices, etc. pour rendre accessible dans une view
 import.meta.glob(["../img/**", "../fonts/**"])
@@ -8,61 +8,19 @@ import.meta.glob(["../img/**", "../fonts/**"])
 
 // Ou importer chaque image individuellement
 
-
-// Récupérer le Token pour l'appel axios
-
-const leToken = document.getElementsByName('_token');
-console.log(leToken[0].value);
-
 // Create an event listener that will send a POST request to the
 // server when the user clicks the button.
 document.querySelector('#submit-button').addEventListener(
-    'click', /* function() {
-        let oOptions = {
-            method: 'POST'
-        }
-        fetch('btnClickedCont', oOptions)
-        .then(console.log('succes'))
-    } */
-    () => window.axios.post('/button/clicked', {"data": {
-        "token": leToken
-    }})
-            
-
+    'click',
+    () => window.axios.post('/button/clicked')
 );
-
 
 // Subscribe to the public channel called "public-channel"
 window.Echo.channel('public-channel')
 
     // Listen for the event called "button.clicked"
     .listen('.button.clicked', (e) => {
-
+        
         // Display the "message" in an alert box
         alert(e.message);
-    });
-
-import Echo from 'laravel-echo';
-import Pusher from 'pusher-js';
-
-const token = document.querySelector('[name="_token"]').value;
-
-
-const echo = new Echo({
-    broadcaster: 'pusher',
-    key: '6d1cffe82e9e50ca7a10',
-    cluster: 'us2',
-    forceTLS: true,
-    auth: {
-        headers: {
-            Authorization: 'Bearer ' + token
-        }
-    },
-    namespace: 'App.Events',
-    encrypted: true,
-});
-
-echo.channel('messages')
-    .listen('NewMessage', (e) => {
-        console.log(e.message);
     });

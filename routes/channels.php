@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Recette;
+use App\Models\User;
 use Illuminate\Support\Facades\Broadcast;
 
 /*
@@ -13,6 +15,10 @@ use Illuminate\Support\Facades\Broadcast;
 |
 */
 
-Broadcast::channel('App.Models.User.{id}', function ($user, $id) {
-    return (int) $user->id === (int) $id;
+/**!SECTION
+ * Vérifier si la recette a bel et bien été créée par cette utilisateur
+ */
+Broadcast::channel('recettes.{recetteId}', function (User $user, int $recetteId) {
+    // return (int) $user->id === Recette::findOrNew($recetteId)->user_id;
+    return true;
 });
