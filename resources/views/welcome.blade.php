@@ -9,10 +9,11 @@
         <button id="submit-button" type="button">
             Press Me!
         </button>
-
         @csrf
+{{--         @php
+            event(new App\Http\Controllers\MyEventController('hello world'));
 
-
+        @endphp --}}
 
 
         <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">

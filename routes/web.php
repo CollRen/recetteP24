@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ButtonClickedController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\UserController;
@@ -9,6 +10,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\IngredientController;
 use App\Http\Controllers\UmesureController;
 use App\Http\Controllers\RecetteController;
+use App\Http\Controllers\MyEventController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +21,17 @@ use App\Http\Controllers\RecetteController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+/* Route::post('/button/clicked', function() {
+    dd('Route');
+} */
 
+/* Route::post('/button/clicked', ButtonClickedController::class)->name('btnClickedCont'); */
+
+Route::post('/button/clicked', ButtonClickedController::class);
+
+/* Route::post('/button/clicked', [ButtonClickedController::class, '']); */
+
+/* ButtonClickedController::class );*/
 Route::get('/lang/{locale}', [SetLocaleController::class, 'index'])->name('lang');
 
 // Pour valider l'identité de l'utilisateur pour cette route
@@ -84,7 +96,7 @@ Route::put('/password/reset/{user}/{token}', [UserController::class, 'resetUpdat
 Route::get('/recette-pdf/{recette}', [RecetteController::class, 'pdf'])->name('recette.pdf');
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome',[MyEventController::class]);
 })->name("welcome");
 
 
