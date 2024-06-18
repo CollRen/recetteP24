@@ -5,15 +5,16 @@
 @section('content')
 
     <body>
-
+    <form {{-- action="{{clicked}}" --}}>
         <button id="submit-button" type="button">
             Press Me!
         </button>
+        </form>
         @csrf
-{{--         @php
-            event(new App\Http\Controllers\MyEventController('hello world'));
+        @php
+            //event(new App\Http\Controllers\MyEventController('hello world'));
 
-        @endphp --}}
+        @endphp
 
 
         <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">

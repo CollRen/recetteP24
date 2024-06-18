@@ -11,6 +11,20 @@ use App\Http\Controllers\IngredientController;
 use App\Http\Controllers\UmesureController;
 use App\Http\Controllers\RecetteController;
 use App\Http\Controllers\MyEventController;
+use Illuminate\Support\Facades\Redis;
+
+Route::get('/publish', function () {
+    // ...
+
+    Redis::publish('test-channel', json_encode([
+        'name' => 'Adam Wathan'
+    ]));
+});
+
+Route::post('/button/clicked', ButtonClickedController::class)->name('/button/clicked');
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,7 +41,7 @@ use App\Http\Controllers\MyEventController;
 
 /* Route::post('/button/clicked', ButtonClickedController::class)->name('btnClickedCont'); */
 
-Route::post('/button/clicked', ButtonClickedController::class);
+Route::post('/button/clicked', ButtonClickedController::class)->name('clicked');
 
 /* Route::post('/button/clicked', [ButtonClickedController::class, '']); */
 

@@ -36,16 +36,19 @@ Utilisation de Echo
 #### Temps réellement passé sur le projet
 
 Lecture de la documentation et début de l'installation
-Mercredi 5 juin 14h30 @ 15h
-Mercredi 5 juin 15h40 @ 
-Jeudi 6 juin
-Vendredi 7 juin 10h50 @
+Mercredi 5 juin 14h30 @ 15h -> .5
+Mercredi 5 juin 15h40 @ 17h -> 1.6
+Jeudi 6 juin 9h @ 12h & 13h @ 15h -> 5
+Vendredi 7 juin 10h50 @ 12h + 1h -> 2.1
+
+Total 9.2
 
 
 
 #### Références utilisés
 
 - [Laravel.com](https://laravel.com/docs/11.x/broadcasting)
+- radis, pusher,
 
 #### Notes en cours de route
 
